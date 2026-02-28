@@ -86,7 +86,10 @@ function type() {
         setTimeout(type, 80 + Math.random() * 60);
     }
 }
-setTimeout(type, 600);
+
+document.fonts.ready.then(() => {
+    setTimeout(type, 600);
+});
 
 const sections = document.querySelectorAll('.section');
 const navButtons = document.querySelectorAll('.header-nav button');
