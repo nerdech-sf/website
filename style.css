@@ -427,3 +427,55 @@ a.footer__value:hover { color: var(--gray-4); }
     letter-spacing: 0.14em;
     color: var(--gray-3);
 }
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+
+    .header-nav {
+        display: none;
+    }
+
+    .section__content {
+        left: 24px;
+        right: 24px;
+        bottom: 48px;
+    }
+
+    .section__label {
+        right: 24px;
+        bottom: 24px;
+    }
+
+    .section::after {
+        display: none;
+    }
+
+    .typewriter {
+        font-size: clamp(28px, 8vw, 48px);
+        width: 85%;
+    }
+
+    .cards-wrapper {
+        padding: 100px 24px 180px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr !important;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .footer__inner {
+        grid-template-columns: 1fr;
+        padding: 48px 24px;
+        gap: 32px;
+    }
+
+    .footer__bottom {
+        padding: 16px 24px;
+    }
+}
