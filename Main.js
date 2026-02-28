@@ -1,6 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
+window.scrollToSection = scrollToSection;
 
 const canvas = document.createElement('canvas');
 canvas.className = 'particle-canvas';
@@ -16,7 +19,6 @@ window.addEventListener('resize', resize);
 
 const PARTICLE_COUNT = 120;
 const particles = [];
-
 for (let i = 0; i < PARTICLE_COUNT; i++) {
     particles.push({
         x:       Math.random() * window.innerWidth,
@@ -34,11 +36,8 @@ function drawParticles() {
     const section = document.elementFromPoint(canvas.width / 2, canvas.height / 2);
     const isDark = section && section.closest('.section--services, .section--about') === null;
     const baseColor = isDark ? '255,255,255' : '0,0,0';
-
     particles.forEach(p => {
-        p.x += p.vx;
-        p.y += p.vy;
-        p.flicker += 0.02;
+        p.x += p.vx; p.y += p.vy; p.flicker += 0.02;
         if (p.x < 0) p.x = canvas.width;
         if (p.x > canvas.width) p.x = 0;
         if (p.y < 0) p.y = canvas.height;
@@ -56,13 +55,9 @@ drawParticles();
 const cursor = document.createElement('div');
 cursor.className = 'cursor-glow';
 document.body.appendChild(cursor);
-
-let mx = window.innerWidth / 2;
-let my = window.innerHeight / 2;
+let mx = window.innerWidth / 2, my = window.innerHeight / 2;
 let cx = mx, cy = my;
-
 document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-
 function animateCursor() {
     cx += (mx - cx) * 0.08;
     cy += (my - cy) * 0.08;
@@ -75,25 +70,31 @@ const scanline = document.createElement('div');
 scanline.className = 'scanline';
 document.body.appendChild(scanline);
 
+// タイプライター
 const typewriterText = 'forge new order';
 const typewriterEl = document.getElementById('typewriter-text');
-let i = 0;
 
-function type() {
-    if (i < typewriterText.length) {
-        typewriterEl.textContent += typewriterText[i];
-        i++;
-        setTimeout(type, 80 + Math.random() * 60);
+function startTyping() {
+    let i = 0;
+    function type() {
+        if (!typewriterEl) return;
+        if (i < typewriterText.length) {
+            typewriterEl.textContent += typewriterText[i];
+            i++;
+            setTimeout(type, 80 + Math.random() * 60);
+        }
     }
+    setTimeout(type, 600);
 }
 
-document.fonts.ready.then(() => {
-    setTimeout(type, 600);
-});
+if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(startTyping);
+} else {
+    startTyping();
+}
 
 const sections = document.querySelectorAll('.section');
 const navButtons = document.querySelectorAll('.header-nav button');
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -104,5 +105,6 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, { threshold: 0.5 });
-
 sections.forEach(s => observer.observe(s));
+
+}); // DOMContentLoaded
