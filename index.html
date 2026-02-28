@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nordach - Desktop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">n</div>
+        <div class="brand">nerdech</div>
+    </header>
+
+    <nav class="header-nav">
+        <button onclick="scrollToSection('top')">top</button>
+        <button onclick="scrollToSection('news')">news</button>
+        <button onclick="scrollToSection('services')">services</button>
+        <button onclick="scrollToSection('about')">about us</button>
+    </nav>
+
+    <main>
+        <section id="top" class="section section--top">
+            <div class="section__label">01</div>
+            <div class="section__content">
+                <h1 class="section__title">top</h1>
+                <p class="section__sub">Welcome to nerdech.</p>
+            </div>
+            <p class="typewriter"><span id="typewriter-text"></span><span class="typewriter__cursor">|</span></p>
+        </section>
+
+        <section id="news" class="section section--news">
+            <div class="section__label">02</div>
+            <div class="cards-wrapper">
+                <div class="cards cards--1">
+                    <div class="card">
+                        <span class="card__date">2026.02.01</span>
+                        <h3 class="card__title">News title here</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section__content">
+                <h1 class="section__title">news</h1>
+                <p class="section__sub">Latest updates & announcements.</p>
+            </div>
+        </section>
+
+        <section id="services" class="section section--services">
+            <div class="section__label">03</div>
+            <div class="cards-wrapper">
+                <div class="cards cards--dark">
+                    <div class="card card--dark">
+                        <span class="card__num">01</span>
+                        <h3 class="card__title">Service name</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="card card--dark">
+                        <span class="card__num">02</span>
+                        <h3 class="card__title">Service name</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="card card--dark">
+                        <span class="card__num">03</span>
+                        <h3 class="card__title">Service name</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="card card--dark">
+                        <span class="card__num">04</span>
+                        <h3 class="card__title">Service name</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section__content">
+                <h1 class="section__title">services</h1>
+                <p class="section__sub">What we offer.</p>
+            </div>
+        </section>
+
+        <section id="about" class="section section--about">
+            <div class="section__label">04</div>
+            <div class="cards-wrapper">
+                <div class="cards">
+                    <div class="card">
+                        <span class="card__num">01</span>
+                        <h3 class="card__title">Our mission</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card__num">02</span>
+                        <h3 class="card__title">Our vision</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card__num">03</span>
+                        <h3 class="card__title">Our team</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card__num">04</span>
+                        <h3 class="card__title">Our values</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section__content">
+                <h1 class="section__title">about us</h1>
+                <p class="section__sub">Who we are.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <div class="footer__logo">n</div>
+                <div class="footer__name">nerdech</div>
+            </div>
+            <div class="footer__contact">
+                <div class="footer__block">
+                    <span class="footer__label">mail</span>
+                    <a href="mailto:hello@nerdech.com" class="footer__value">hello@nerdech.com</a>
+                </div>
+                <div class="footer__block">
+                    <span class="footer__label">tel</span>
+                    <span class="footer__value">+81 00-0000-0000</span>
+                </div>
+                <div class="footer__block">
+                    <span class="footer__label">address</span>
+                    <span class="footer__value">1-1-1 Chiyoda, Tokyo, Japan</span>
+                </div>
+            </div>
+            <div class="footer__sns">
+                <span class="footer__label">follow</span>
+                <div class="footer__sns-links">
+                    <a href="#" class="footer__sns-item">X</a>
+                    <a href="#" class="footer__sns-item">Instagram</a>
+                    <a href="#" class="footer__sns-item">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span>&copy; 2026 nerdech. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
