@@ -1,8 +1,7 @@
 <?php
-// ============================================================
-// ▼ 受信するメールアドレスをここで設定してください
-// ============================================================
-$admin_email = 'your@email.com';
+require_once __DIR__ . '/env_loader.php';
+
+$admin_email = $_ENV['ADMIN_EMAIL'] ?? '';
 
 // データ保存先
 $data_file = __DIR__ . '/data/contacts.json';

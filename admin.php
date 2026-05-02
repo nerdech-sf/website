@@ -1,10 +1,8 @@
 <?php
 session_start();
+require_once __DIR__ . '/env_loader.php';
 
-// ============================================================
-// ▼ 管理者パスワードをここで変更してください
-// ============================================================
-define('ADMIN_PASSWORD', 'nerdech2026');
+define('ADMIN_PASSWORD', $_ENV['ADMIN_PASSWORD'] ?? '');
 define('DATA_FILE', __DIR__ . '/data/contacts.json');
 
 function loadContacts(): array {

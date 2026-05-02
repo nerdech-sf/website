@@ -1,0 +1,21 @@
+# ============================================================
+# セキュリティ: 機密ファイルへの直接アクセスを禁止
+# ============================================================
+
+# .env ファイル
+<Files ".env">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# env_loader.php（PHPから require する専用ファイル）
+<Files "env_loader.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# data ディレクトリ内のJSONファイル
+<FilesMatch "\.json$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
