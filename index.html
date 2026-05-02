@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nerdech - Desktop</title>
+    <meta name="description" content="nerdech — テクノロジーで社会課題を解決するスタートアップ">
+    <meta name="theme-color" content="#0a0a0a">
+    <!-- OGP -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://nerdech.com/">
+    <meta property="og:title"       content="nerdech">
+    <meta property="og:description" content="テクノロジーで社会課題を解決するスタートアップ">
+    <meta property="og:image"       content="https://nerdech.com/og-image.png">
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="nerdech">
+    <meta name="twitter:description" content="テクノロジーで社会課題を解決するスタートアップ">
+    <meta name="twitter:image"       content="https://nerdech.com/og-image.png">
+    <title>nerdech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,105 +23,132 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo">n</div>
-        <div class="brand">nerdech</div>
+        <a href="#top" class="header__logo" aria-label="nerdech — トップへ">
+            <span class="logo" aria-hidden="true">n</span>
+            <span class="brand">nerdech</span>
+        </a>
+        <nav class="header-nav" aria-label="メインナビゲーション">
+            <button onclick="scrollToSection('top')">top</button>
+            <button onclick="scrollToSection('vision')">our vision</button>
+            <button onclick="scrollToSection('news')">news</button>
+            <button onclick="scrollToSection('services')">services</button>
+            <button onclick="scrollToSection('about')">about us</button>
+            <button onclick="scrollToSection('contact')">contact</button>
+        </nav>
     </header>
 
-    <nav class="header-nav">
-        <button onclick="scrollToSection('top')">top</button>
-        <button onclick="scrollToSection('news')">news</button>
-        <button onclick="scrollToSection('services')">services</button>
-        <button onclick="scrollToSection('about')">about us</button>
-    </nav>
-
     <main>
+        <!-- ─── 01 TOP ─── -->
         <section id="top" class="section section--top">
-            <div class="section__label">01</div>
+            <div class="section__label" aria-hidden="true">01</div>
             <div class="section__content">
                 <h1 class="section__title">top</h1>
                 <p class="section__sub">Welcome to nerdech.</p>
             </div>
-            <p class="typewriter"><span id="typewriter-text"></span><span class="typewriter__cursor">|</span></p>
+            <p class="typewriter" aria-live="polite">
+                <span id="typewriter-text"></span><span class="typewriter__cursor" aria-hidden="true">|</span>
+            </p>
+            <div class="scroll-indicator" aria-hidden="true"></div>
         </section>
 
+        <!-- ─── 02 OUR VISION ─── -->
+        <section id="vision" class="section section--vision">
+            <div class="section__label" aria-hidden="true">02</div>
+            <div class="vision__body">
+                <p class="vision__statement">テクノロジーで、<br>社会の課題を<br>解決する。</p>
+                <p class="vision__sub">We build technology that matters.</p>
+            </div>
+            <div class="section__content">
+                <h2 class="section__title">our vision</h2>
+                <p class="section__sub">Who we are &amp; where we're going.</p>
+            </div>
+        </section>
+
+        <!-- ─── 03 NEWS ─── -->
         <section id="news" class="section section--news">
-            <div class="section__label">02</div>
+            <div class="section__label" aria-hidden="true">03</div>
             <div class="cards-wrapper">
                 <div class="cards cards--1">
-                    <div class="card">
-                        <span class="card__date">2026.02.01</span>
-                        <h3 class="card__title">News title here</h3>
-                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+                    <article class="card">
+                        <time class="card__date" datetime="2025-02-11">2025.02.11</time>
+                        <h3 class="card__title">第13回 高校生ビジネスプラングランプリ 審査員特別賞受賞</h3>
+                        <p class="card__body">高専生チームとして初めて本グランプリに参加し、審査員特別賞を受賞しました。社会課題の解決に向けた取り組みが高く評価されました。</p>
+                    </article>
                 </div>
             </div>
             <div class="section__content">
-                <h1 class="section__title">news</h1>
-                <p class="section__sub">Latest updates & announcements.</p>
+                <h2 class="section__title">news</h2>
+                <p class="section__sub">Latest updates &amp; announcements.</p>
             </div>
         </section>
 
+        <!-- ─── 04 SERVICES ─── -->
         <section id="services" class="section section--services">
-            <div class="section__label">03</div>
+            <div class="section__label" aria-hidden="true">04</div>
             <div class="cards-wrapper">
                 <div class="cards cards--dark">
                     <div class="card card--dark">
-                        <span class="card__num">01</span>
-                        <h3 class="card__title">Service name</h3>
-                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                        <span class="card__num" aria-hidden="true">01</span>
+                        <h3 class="card__title">Web 開発</h3>
+                        <p class="card__body">要件定義から設計・実装・運用まで一貫して対応。スケーラブルなWebサイト・Webアプリケーションをご提供します。</p>
                     </div>
                     <div class="card card--dark">
-                        <span class="card__num">02</span>
-                        <h3 class="card__title">Service name</h3>
-                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                        <span class="card__num" aria-hidden="true">02</span>
+                        <h3 class="card__title">モバイルアプリ開発</h3>
+                        <p class="card__body">iOS・Android 双方に対応したクロスプラットフォームアプリの企画・開発・リリースまでをトータルサポートします。</p>
                     </div>
                     <div class="card card--dark">
-                        <span class="card__num">03</span>
-                        <h3 class="card__title">Service name</h3>
-                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                        <span class="card__num" aria-hidden="true">03</span>
+                        <h3 class="card__title">AI・機械学習実装</h3>
+                        <p class="card__body">業務効率化や新サービス創出に向けたAIモデルの開発・既存システムへの統合・運用体制の構築を支援します。</p>
                     </div>
                     <div class="card card--dark">
-                        <span class="card__num">04</span>
-                        <h3 class="card__title">Service name</h3>
-                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                        <span class="card__num" aria-hidden="true">04</span>
+                        <h3 class="card__title">技術コンサルティング</h3>
+                        <p class="card__body">技術選定・アーキテクチャ設計から開発体制の構築まで、プロジェクト全体を技術面から戦略的にサポートします。</p>
                     </div>
                 </div>
             </div>
             <div class="section__content">
-                <h1 class="section__title">services</h1>
+                <h2 class="section__title">services</h2>
                 <p class="section__sub">What we offer.</p>
             </div>
         </section>
 
+        <!-- ─── 05 ABOUT ─── -->
         <section id="about" class="section section--about">
-            <div class="section__label">04</div>
+            <div class="section__label" aria-hidden="true">05</div>
             <div class="cards-wrapper">
                 <div class="cards">
                     <div class="card">
-                        <span class="card__num">01</span>
+                        <span class="card__num" aria-hidden="true">01</span>
                         <h3 class="card__title">Our mission</h3>
-                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                        <p class="card__body">テクノロジーの力で、社会に潜む課題を面白く・本質的に解決する。難しい問いほど、真剣に向き合います。</p>
                     </div>
                     <div class="card">
-                        <span class="card__num">02</span>
-                        <h3 class="card__title">Our vision</h3>
-                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-                    </div>
-                    <div class="card">
-                        <span class="card__num">03</span>
+                        <span class="card__num" aria-hidden="true">02</span>
                         <h3 class="card__title">Our team</h3>
-                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                        <p class="card__body">高専・大学で技術を磨いた若手エンジニアの集団。肩書きより実力、年齢より情熱を大切にしています。</p>
                     </div>
                     <div class="card">
-                        <span class="card__num">04</span>
-                        <h3 class="card__title">Our values</h3>
-                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                        <span class="card__num" aria-hidden="true">03</span>
+                        <h3 class="card__title">Join us</h3>
+                        <p class="card__body">一緒に社会を変えるエンジニア・デザイナーを求めています。ポジションや経験より、あなたの熱量を大切にします。</p>
                     </div>
                 </div>
             </div>
             <div class="section__content">
-                <h1 class="section__title">about us</h1>
+                <h2 class="section__title">about us</h2>
                 <p class="section__sub">Who we are.</p>
+            </div>
+        </section>
+
+        <!-- ─── 06 CONTACT ─── -->
+        <section id="contact" class="section section--contact">
+            <div class="section__label" aria-hidden="true">06</div>
+            <div class="contact-cta">
+                <p class="contact-cta__lead">プロジェクトのご相談、<br>まずはお気軽にどうぞ。</p>
+                <a href="contact.html" class="contact-cta__btn">お問い合わせ →</a>
             </div>
         </section>
     </main>
@@ -117,38 +156,37 @@
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__brand">
-                <div class="footer__logo">n</div>
+                <div class="footer__logo" aria-hidden="true">n</div>
                 <div class="footer__name">nerdech</div>
             </div>
-            <div class="footer__contact">
-                <div class="footer__block">
+            <address class="footer__contact">
+                <!-- <div class="footer__block">
                     <span class="footer__label">mail</span>
                     <a href="mailto:hello@nerdech.com" class="footer__value">hello@nerdech.com</a>
-                </div>
-                <div class="footer__block">
+                </div> -->
+                <!-- <div class="footer__block">
                     <span class="footer__label">tel</span>
-                    <span class="footer__value">+81 00-0000-0000</span>
-                </div>
+                    <a href="tel:+810000000000" class="footer__value">+81 00-0000-0000</a>
+                </div> -->
                 <div class="footer__block">
                     <span class="footer__label">address</span>
-                    <span class="footer__value">1-1-1 Chiyoda, Tokyo, Japan</span>
+                    <span class="footer__value">東京都渋谷区道玄坂一丁目１０番８号<br>渋谷道玄坂東急ビル２Ｆ－Ｃ</span>
                 </div>
-            </div>
-            <div class="footer__sns">
+            </address>
+            <!-- <nav class="footer__sns" aria-label="ソーシャルメディア">
                 <span class="footer__label">follow</span>
                 <div class="footer__sns-links">
-                    <a href="#" class="footer__sns-item">X</a>
-                    <a href="#" class="footer__sns-item">Instagram</a>
-                    <a href="#" class="footer__sns-item">LinkedIn</a>
+                    <a href="#" class="footer__sns-item" aria-label="X (旧Twitter)">X</a>
+                    <a href="#" class="footer__sns-item" aria-label="Instagram">Instagram</a>
+                    <a href="#" class="footer__sns-item" aria-label="LinkedIn">LinkedIn</a>
                 </div>
-            </div>
+            </nav> -->
         </div>
         <div class="footer__bottom">
-            <span>&copy; 2026 nerdech. All rights reserved.</span>
+            <small>&copy; 2026 nerdech. All rights reserved.</small>
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="Main.js"></script>
 </body>
-
 </html>
