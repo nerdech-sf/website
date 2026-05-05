@@ -1,20 +1,20 @@
-# ============================================================
-# セキュリティ: 機密ファイルへの直接アクセスを禁止
-# ============================================================
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ %{REQUEST_SCHEME}://%1/$1 [R=301,L]
 
-# .env ファイル
+# .env ファイルへの直接アクセスを禁止
 <Files ".env">
     Order allow,deny
     Deny from all
 </Files>
 
-# env_loader.php（PHPから require する専用ファイル）
+# env_loader.php への直接アクセスを禁止
 <Files "env_loader.php">
     Order allow,deny
     Deny from all
 </Files>
 
-# data ディレクトリ内のJSONファイル
+# data ディレクトリ内の JSON ファイルへのアクセスを禁止
 <FilesMatch "\.json$">
     Order allow,deny
     Deny from all

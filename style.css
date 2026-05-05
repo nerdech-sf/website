@@ -156,7 +156,7 @@ body {
 
 .section__content {
     position: absolute;
-    bottom: 64px;
+    top: 100px;
     left: 60px;
     right: 60px;
     display: flex;
@@ -238,9 +238,9 @@ body {
 
 .vision__body {
     position: absolute;
-    top: 50%;
+    top: 58%;
     left: 50%;
-    transform: translate(-50%, -54%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -295,7 +295,7 @@ body {
    CARDS
 ===================== */
 .cards-wrapper {
-    padding: 140px 60px 200px;
+    padding: 230px 60px 80px;
     width: 100%;
 }
 
@@ -554,7 +554,7 @@ a.footer__value:hover { color: var(--gray-4); }
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -54%);
+    transform: translate(-50%, -44%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -614,7 +614,7 @@ a.footer__value:hover { color: var(--gray-4); }
 
 .contact-split {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 9fr 11fr;
     height: 100vh;
 }
 
@@ -664,7 +664,8 @@ a.footer__value:hover { color: var(--gray-4); }
 
 .cs-statement {
     font-family: var(--font-display);
-    font-size: clamp(26px, 3vw, 38px);
+    /* 左パネル幅 = 40vw - 112px(padding)、最長行12文字が収まるよう数式で導出 */
+    font-size: clamp(14px, calc(3vw - 9px), 32px);
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: -0.5px;
@@ -760,18 +761,18 @@ a.footer__value:hover { color: var(--gray-4); }
 
 .cs-right__inner {
     width: 100%;
-    max-width: 440px;
+    max-width: 480px;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 20px;
 }
 
 .cs-right__header {
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 300;
     letter-spacing: 0.24em;
-    color: var(--gray-3);
+    color: var(--gray-4);
 }
 
 .cs-right__note {
@@ -791,24 +792,24 @@ a.footer__value:hover { color: var(--gray-4); }
 .contact-form__row {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 20px 24px;
+    gap: 8px;
+    padding: 16px 22px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.contact-form__row--message { gap: 10px; }
+.contact-form__row--message { gap: 8px; }
 
 .contact-form__label {
     font-family: var(--font-mono);
     font-size: 10px;
-    font-weight: 300;
-    letter-spacing: 0.22em;
-    color: var(--gray-3);
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--gray-4);
 }
 
 .contact-form__input {
     font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.04em;
     color: var(--white);
@@ -820,20 +821,20 @@ a.footer__value:hover { color: var(--gray-4); }
 }
 
 .contact-form__input::placeholder {
-    color: var(--gray-3);
-    opacity: 0.45;
+    color: var(--gray-4);
+    opacity: 0.55;
 }
 
 .contact-form__textarea {
     resize: none;
-    min-height: 120px;
-    line-height: 1.9;
+    min-height: 90px;
+    line-height: 1.8;
 }
 
 .contact-form__footer {
     display: flex;
     justify-content: flex-end;
-    padding: 20px 24px;
+    padding: 16px 22px;
 }
 
 .contact-form__submit {
@@ -900,13 +901,15 @@ a.footer__value:hover { color: var(--gray-4); }
 /* =====================
    RESPONSIVE
 ===================== */
+
+
 @media (max-width: 768px) {
     .header-nav { display: none; }
 
     .section__content {
         left: 24px;
         right: 24px;
-        bottom: 48px;
+        top: 80px;
     }
 
     .section__label {
@@ -927,7 +930,7 @@ a.footer__value:hover { color: var(--gray-4); }
 
     .scroll-indicator { display: none; }
 
-    .cards-wrapper { padding: 100px 24px 160px; }
+    .cards-wrapper { padding: 190px 24px 60px; }
 
     .cards {
         grid-template-columns: 1fr;

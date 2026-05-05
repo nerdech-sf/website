@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H37PYR7S1G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-H37PYR7S1G');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="nerdech へのお問い合わせ — プロジェクトのご相談はこちらから">
     <meta name="theme-color" content="#0a0a0a">
     <!-- OGP -->
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://nerdech.co.jp/contact.html">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta property="og:type"        content="website">
-    <meta property="og:url"         content="https://nerdech.com/contact">
+    <meta property="og:url"         content="https://nerdech.co.jp/contact.html">
     <meta property="og:title"       content="contact | nerdech">
-    <meta property="og:description" content="プロジェクトのご相談はこちらから">
-    <meta property="og:image"       content="https://nerdech.com/og-image.png">
+    <meta property="og:description" content="プロジェクトのご相談はこちらから。Web開発・AI実装など、まずはお気軽にどうぞ。">
+    <meta property="og:image"       content="https://nerdech.co.jp/og-image.png">
+    <meta property="og:locale"      content="ja_JP">
+    <meta property="og:site_name"   content="nerdech">
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:title"       content="contact | nerdech">
-    <meta name="twitter:description" content="プロジェクトのご相談はこちらから">
-    <meta name="twitter:image"       content="https://nerdech.com/og-image.png">
+    <meta name="twitter:description" content="プロジェクトのご相談はこちらから。Web開発・AI実装など、まずはお気軽にどうぞ。">
+    <meta name="twitter:image"       content="https://nerdech.co.jp/og-image.png">
     <title>contact | nerdech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,6 +111,7 @@
     <script src="Main.js"></script>
     <script>
     (function () {
+        // ── 送信結果の表示 ──
         const params = new URLSearchParams(window.location.search);
         if (params.get('sent') === '1') {
             document.getElementById('contact-form').style.display = 'none';
@@ -104,6 +121,64 @@
         if (params.get('error') === '1') {
             document.getElementById('form-error').style.display = 'block';
         }
+
+        // ── テキストを実測して font-size を自動調整 ──
+        function fitStatement() {
+            const el = document.querySelector('.cs-statement');
+            const panel = document.querySelector('.contact-split__left');
+            if (!el || !panel) return;
+
+            // 左パネルの実際のテキスト幅を取得
+            const panelStyle = getComputedStyle(panel);
+            const availWidth = panel.clientWidth
+                - parseFloat(panelStyle.paddingLeft)
+                - parseFloat(panelStyle.paddingRight);
+
+            // <br> で区切られた各行を測定するための隠し要素を作成
+            const probe = document.createElement('span');
+            probe.style.cssText = [
+                'position:absolute',
+                'white-space:nowrap',
+                'visibility:hidden',
+                'pointer-events:none',
+                'font-family:' + getComputedStyle(el).fontFamily,
+                'font-weight:' + getComputedStyle(el).fontWeight,
+                'letter-spacing:' + getComputedStyle(el).letterSpacing,
+            ].join(';');
+            document.body.appendChild(probe);
+
+            // <br> で分割して各行のテキストを取得
+            const segments = el.innerHTML.split(/<br\s*\/?>/i).map(s => s.trim());
+
+            // 二分探索で最適な font-size を求める
+            let lo = 10, hi = 60;
+            for (let i = 0; i < 24; i++) {
+                const mid = (lo + hi) / 2;
+                probe.style.fontSize = mid + 'px';
+
+                // 最も幅が広い行を基準にする
+                const maxW = segments.reduce((acc, seg) => {
+                    probe.textContent = seg;
+                    return Math.max(acc, probe.offsetWidth);
+                }, 0);
+
+                if (maxW > availWidth) hi = mid;
+                else lo = mid;
+            }
+
+            document.body.removeChild(probe);
+
+            // 安全マージン 4% を引いた値を適用
+            el.style.fontSize = Math.floor(lo * 0.96) + 'px';
+        }
+
+        // フォント読み込み後に実行（フォントで幅が変わるため）
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(fitStatement);
+        } else {
+            window.addEventListener('load', fitStatement);
+        }
+        window.addEventListener('resize', fitStatement);
     })();
     </script>
 </body>
