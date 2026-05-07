@@ -14,6 +14,15 @@ RewriteRule ^(.*)$ %{REQUEST_SCHEME}://%1/$1 [R=301,L]
     Deny from all
 </Files>
 
+# 内部ロジックへの直接アクセスを禁止
+<Files "news_store.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# runtime data への直接アクセスを禁止
+RedirectMatch 403 ^/data/
+
 # data ディレクトリ内の JSON ファイルへのアクセスを禁止
 <FilesMatch "\.json$">
     Order allow,deny

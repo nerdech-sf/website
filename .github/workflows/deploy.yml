@@ -41,6 +41,7 @@ jobs:
             **/.github/**
             **/node_modules/**
             **/dist/**
+            **/data/**
             **/package.json
             **/package-lock.json
             **/Vite.config
