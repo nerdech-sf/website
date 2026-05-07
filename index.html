@@ -11,8 +11,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="nerdech — テクノロジーで社会課題を解決するスタートアップ。Web開発・モバイルアプリ・AI実装・技術コンサルティングを提供します。">
-    <meta name="keywords" content="nerdech, スタートアップ, Web開発, モバイルアプリ, AI, 機械学習, 技術コンサルティング, 社会課題">
+    <meta name="description" content="合同会社 nerdech — テクノロジーで社会課題を解決するスタートアップ。AIコンサルティング・受託開発を提供します。">
+    <meta name="keywords" content="合同会社 nerdech, nerdech, スタートアップ, 受託開発, AIコンサルティング, AI, 機械学習, 社会課題">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="canonical" href="https://nerdech.co.jp/">
@@ -24,16 +24,16 @@
     <!-- OGP -->
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="https://nerdech.co.jp/">
-    <meta property="og:title"       content="nerdech — テクノロジーで社会課題を解決する">
-    <meta property="og:description" content="Web開発・モバイルアプリ・AI実装・技術コンサルティングを提供するスタートアップ。">
+    <meta property="og:title"       content="合同会社 nerdech — テクノロジーで社会課題を解決する">
+    <meta property="og:description" content="AIコンサルティング・受託開発を提供するスタートアップ。">
     <meta property="og:image"       content="https://nerdech.co.jp/og-image.png">
     <meta property="og:locale"      content="ja_JP">
     <meta property="og:site_name"   content="nerdech">
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="nerdech — テクノロジーで社会課題を解決する">
-    <meta name="twitter:description" content="Web開発・モバイルアプリ・AI実装・技術コンサルティングを提供するスタートアップ。">
+    <meta name="twitter:title"       content="合同会社 nerdech — テクノロジーで社会課題を解決する">
+    <meta name="twitter:description" content="AIコンサルティング・受託開発を提供するスタートアップ。">
     <meta name="twitter:image"       content="https://nerdech.co.jp/og-image.png">
-    <title>nerdech — テクノロジーで社会課題を解決するスタートアップ</title>
+    <title>合同会社 nerdech — テクノロジーで社会課題を解決するスタートアップ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -43,9 +43,12 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "nerdech",
+        "name": "合同会社 nerdech",
+        "legalName": "合同会社 nerdech",
         "url": "https://nerdech.co.jp",
-        "description": "テクノロジーで社会課題を解決するスタートアップ。Web開発・モバイルアプリ・AI実装・技術コンサルティングを提供。",
+        "description": "テクノロジーで社会課題を解決するスタートアップ。AIコンサルティング・受託開発を提供。",
+        "foundingDate": "2026-04",
+        "email": "info@nerdech.co.jp",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "道玄坂一丁目１０番８号 渋谷道玄坂東急ビル２Ｆ－Ｃ",
@@ -56,6 +59,7 @@
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "customer support",
+            "email": "info@nerdech.co.jp",
             "url": "https://nerdech.co.jp/contact.html"
         }
     }
@@ -70,6 +74,7 @@
         <nav class="header-nav" aria-label="メインナビゲーション">
             <button onclick="scrollToSection('top')">top</button>
             <button onclick="scrollToSection('vision')">our vision</button>
+            <button onclick="scrollToSection('project')">project</button>
             <button onclick="scrollToSection('news')">news</button>
             <button onclick="scrollToSection('services')">services</button>
             <button onclick="scrollToSection('about')">about us</button>
@@ -105,15 +110,78 @@
             </div>
         </section>
 
-        <!-- ─── 03 NEWS ─── -->
-        <section id="news" class="section section--news">
+        <!-- ─── 03 PROJECT ─── -->
+        <section id="project" class="section section--project">
             <div class="section__label" aria-hidden="true">03</div>
             <div class="cards-wrapper">
-                <div class="cards cards--1">
+                <div class="project-feature">
+                    <div class="project-feature__main">
+                        <span class="project-feature__eyebrow">flagship project</span>
+                        <h2 class="project-feature__title">CareTalker</h2>
+                        <p class="project-feature__lead">認知症高齢者の徘徊ゼロを目指す、対話型AI見守りシステム。</p>
+                        <p class="project-feature__body">玄関に設置する専用デバイスが、外出・帰宅のタイミングで自然に声をかけ、会話の中から徘徊リスクを検知。リスクが高い場合は家族・警備会社・デイサービス等へ通知し、駆けつけるまでの時間を会話でつなぎます。</p>
+                    </div>
+                    <div class="project-feature__side">
+                        <div class="project-stat">
+                            <span class="project-stat__value">5,640</span>
+                            <span class="project-stat__label">応募総数</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="project-stat__value">10</span>
+                            <span class="project-stat__label">ファイナリスト選出</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="project-stat__value">top 5</span>
+                            <span class="project-stat__label">優秀賞受賞</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards cards--project">
                     <article class="card">
-                        <time class="card__date" datetime="2025-02-11">2025.02.11</time>
-                        <h3 class="card__title">第13回 高校生ビジネスプラングランプリ 審査員特別賞受賞</h3>
-                        <p class="card__body">高専生チームとして初めて本グランプリに参加し、審査員特別賞を受賞しました。社会課題の解決に向けた取り組みが高く評価されました。</p>
+                        <span class="card__num" aria-hidden="true">01</span>
+                        <h3 class="card__title">Natural conversation</h3>
+                        <p class="card__body">「どちらへ？」「おかえりなさい」といった自然な声かけを起点に、本人の違和感を増やさず見守ります。</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__num" aria-hidden="true">02</span>
+                        <h3 class="card__title">Risk detection</h3>
+                        <p class="card__body">小型カメラ・マイク・スピーカーを備えたデバイスで外出前後の状態を捉え、徘徊リスクを検知します。</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__num" aria-hidden="true">03</span>
+                        <h3 class="card__title">Family dashboard</h3>
+                        <p class="card__body">家族はスマートフォンから会話ログやAIによる健康状態の自動要約レポートを確認できます。</p>
+                    </article>
+                </div>
+            </div>
+            <div class="section__content">
+                <h2 class="section__title">project</h2>
+                <p class="section__sub">What we are building.</p>
+            </div>
+        </section>
+
+        <!-- ─── 04 NEWS ─── -->
+        <section id="news" class="section section--news">
+            <div class="section__label" aria-hidden="true">04</div>
+            <div class="cards-wrapper">
+                <div class="cards">
+                    <article class="card">
+                        <time class="card__date" datetime="2026-01-11">2026.01.11</time>
+                        <h3 class="card__title">Care Talker AI が第13回 高校生ビジネスプラン・グランプリで優秀賞を受賞</h3>
+                        <p class="card__body">応募総数5,640件、639校の中からファイナリストに選出され、最終審査会で優秀賞を受賞しました。</p>
+                        <a class="card__link" href="https://www.jfc.go.jp/n/grandprix/result/13th.html" target="_blank" rel="noopener">official result →</a>
+                    </article>
+                    <article class="card">
+                        <time class="card__date" datetime="2025-11-27">2025.11.27</time>
+                        <h3 class="card__title">Care Talker AI がファイナリスト10組に選出</h3>
+                        <p class="card__body">阿南工業高等専門学校と東京工業高等専門学校の合同チームとして、過去最多応募の中からファイナリストに選ばれました。</p>
+                        <a class="card__link" href="https://www.anan-nct.ac.jp/notifications/46988/" target="_blank" rel="noopener">school news →</a>
+                    </article>
+                    <article class="card">
+                        <time class="card__date" datetime="2025-11-27">2025.11.27</time>
+                        <h3 class="card__title">対話型AI見守りシステム CareTalker を発表</h3>
+                        <p class="card__body">認知症高齢者の徘徊を未然に防ぐため、玄関で自然に声をかけるAIデバイスと家族向けレポートを提案しました。</p>
+                        <a class="card__link" href="https://www.jfc.go.jp/n/grandprix/assets/data/2026_finalist_bp05.pdf" target="_blank" rel="noopener">plan summary →</a>
                     </article>
                 </div>
             </div>
@@ -123,30 +191,30 @@
             </div>
         </section>
 
-        <!-- ─── 04 SERVICES ─── -->
+        <!-- ─── 05 SERVICES ─── -->
         <section id="services" class="section section--services">
-            <div class="section__label" aria-hidden="true">04</div>
+            <div class="section__label" aria-hidden="true">05</div>
             <div class="cards-wrapper">
                 <div class="cards cards--dark">
                     <div class="card card--dark">
                         <span class="card__num" aria-hidden="true">01</span>
-                        <h3 class="card__title">Web 開発</h3>
-                        <p class="card__body">要件定義から設計・実装・運用まで一貫して対応。スケーラブルなWebサイト・Webアプリケーションをご提供します。</p>
+                        <h3 class="card__title">AI consulting</h3>
+                        <p class="card__body">業務課題の整理からAI活用方針、PoC設計、モデル・API選定まで支援。使えるAIに落とし込むための技術判断を伴走します。</p>
                     </div>
                     <div class="card card--dark">
                         <span class="card__num" aria-hidden="true">02</span>
-                        <h3 class="card__title">モバイルアプリ開発</h3>
-                        <p class="card__body">iOS・Android 双方に対応したクロスプラットフォームアプリの企画・開発・リリースまでをトータルサポートします。</p>
+                        <h3 class="card__title">AI prototype</h3>
+                        <p class="card__body">チャットボット、画像・音声解析、業務自動化、レポート生成など、検証に必要なプロトタイプを短いサイクルで実装します。</p>
                     </div>
                     <div class="card card--dark">
                         <span class="card__num" aria-hidden="true">03</span>
-                        <h3 class="card__title">AI・機械学習実装</h3>
-                        <p class="card__body">業務効率化や新サービス創出に向けたAIモデルの開発・既存システムへの統合・運用体制の構築を支援します。</p>
+                        <h3 class="card__title">受託開発</h3>
+                        <p class="card__body">Webアプリ、管理画面、モバイル向けUI、バックエンドAPIまで、企画段階から実装・改善までまとめて対応します。</p>
                     </div>
                     <div class="card card--dark">
                         <span class="card__num" aria-hidden="true">04</span>
-                        <h3 class="card__title">技術コンサルティング</h3>
-                        <p class="card__body">技術選定・アーキテクチャ設計から開発体制の構築まで、プロジェクト全体を技術面から戦略的にサポートします。</p>
+                        <h3 class="card__title">Care tech R&amp;D</h3>
+                        <p class="card__body">CareTalker で培った対話AI・見守り・通知設計の知見をもとに、介護・福祉領域の新規サービス開発を支援します。</p>
                     </div>
                 </div>
             </div>
@@ -156,9 +224,9 @@
             </div>
         </section>
 
-        <!-- ─── 05 ABOUT ─── -->
+        <!-- ─── 06 ABOUT ─── -->
         <section id="about" class="section section--about">
-            <div class="section__label" aria-hidden="true">05</div>
+            <div class="section__label" aria-hidden="true">06</div>
             <div class="cards-wrapper">
                 <div class="cards">
                     <div class="card">
@@ -176,6 +244,32 @@
                         <h3 class="card__title">Join us</h3>
                         <p class="card__body">一緒に社会を変えるエンジニア・デザイナーを求めています。ポジションや経験より、あなたの熱量を大切にします。</p>
                     </div>
+                    <div class="card card--profile">
+                        <span class="card__num" aria-hidden="true">04</span>
+                        <h3 class="card__title">Company profile</h3>
+                        <dl class="company-list card__body">
+                            <div class="company-list__row">
+                                <dt>社名</dt>
+                                <dd>合同会社 nerdech</dd>
+                            </div>
+                            <div class="company-list__row">
+                                <dt>設立</dt>
+                                <dd>2026年4月</dd>
+                            </div>
+                            <div class="company-list__row">
+                                <dt>代表者</dt>
+                                <dd>木戸 隆正（きど りゅうせい）</dd>
+                            </div>
+                            <div class="company-list__row">
+                                <dt>事業内容</dt>
+                                <dd>AIコンサルティング・受託開発</dd>
+                            </div>
+                            <div class="company-list__row">
+                                <dt>法人番号</dt>
+                                <dd>発行中</dd>
+                            </div>
+                        </dl>
+                    </div>
                 </div>
             </div>
             <div class="section__content">
@@ -184,9 +278,9 @@
             </div>
         </section>
 
-        <!-- ─── 06 CONTACT ─── -->
+        <!-- ─── 07 CONTACT ─── -->
         <section id="contact" class="section section--contact">
-            <div class="section__label" aria-hidden="true">06</div>
+            <div class="section__label" aria-hidden="true">07</div>
             <div class="contact-cta">
                 <p class="contact-cta__lead">プロジェクトのご相談、<br>まずはお気軽にどうぞ。</p>
                 <a href="contact.html" class="contact-cta__btn">お問い合わせ →</a>
@@ -201,10 +295,10 @@
                 <div class="footer__name">nerdech</div>
             </div>
             <address class="footer__contact">
-                <!-- <div class="footer__block">
+                <div class="footer__block">
                     <span class="footer__label">mail</span>
-                    <a href="mailto:hello@nerdech.com" class="footer__value">hello@nerdech.com</a>
-                </div> -->
+                    <a href="mailto:info@nerdech.co.jp" class="footer__value">info@nerdech.co.jp</a>
+                </div>
                 <!-- <div class="footer__block">
                     <span class="footer__label">tel</span>
                     <a href="tel:+810000000000" class="footer__value">+81 00-0000-0000</a>
