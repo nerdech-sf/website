@@ -17,6 +17,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Create runtime env
+        run: |
+          {
+            echo "ADMIN_PASSWORD=${ADMIN_PASSWORD}"
+            echo "ADMIN_EMAIL=${ADMIN_EMAIL}"
+          } > .env
+        env:
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -29,7 +39,6 @@ jobs:
             **/.git*
             **/.git*/**
             **/.github/**
-            **/.env
             **/node_modules/**
             **/dist/**
             **/package.json
