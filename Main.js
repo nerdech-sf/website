@@ -71,7 +71,7 @@ scanline.className = 'scanline';
 document.body.appendChild(scanline);
 
 // タイプライター
-const typewriterText = 'forge new order';
+const typewriterText = 'forge a new order';
 const typewriterEl = document.getElementById('typewriter-text');
 
 function startTyping() {
