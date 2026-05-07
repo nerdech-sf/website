@@ -155,6 +155,59 @@ if ($loggedIn && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         redirect_admin(['panel' => 'news']);
     }
 
+    if ($action === 'update_news') {
+        $id = (string) ($_POST['id'] ?? '');
+        $date = trim((string) ($_POST['date'] ?? ''));
+        $title = trim((string) ($_POST['title'] ?? ''));
+        $body = trim((string) ($_POST['body'] ?? ''));
+        $linkLabel = trim((string) ($_POST['link_label'] ?? ''));
+        $linkUrl = trim((string) ($_POST['link_url'] ?? ''));
+
+        if ($id === '' || $date === '' || $title === '' || $body === '') {
+            flash('error', 'id / date / title / body は必須です。');
+            redirect_admin(['panel' => 'news']);
+        }
+
+        if (($linkLabel === '') !== ($linkUrl === '')) {
+            flash('error', 'リンクは label と URL を両方入力してください。');
+            redirect_admin(['panel' => 'news']);
+        }
+
+        if ($linkUrl !== '' && !filter_var($linkUrl, FILTER_VALIDATE_URL)) {
+            flash('error', 'リンクURLの形式が正しくありません。');
+            redirect_admin(['panel' => 'news']);
+        }
+
+        $news = nerdech_load_news(true);
+        $updated = false;
+        foreach ($news as &$item) {
+            if (($item['id'] ?? '') === $id) {
+                $item = [
+                    'id' => $id,
+                    'date' => $date,
+                    'display_date' => nerdech_format_news_date($date),
+                    'title' => $title,
+                    'body' => $body,
+                    'link_label' => $linkLabel,
+                    'link_url' => $linkUrl,
+                    'published' => !empty($_POST['published']),
+                ];
+                $updated = true;
+                break;
+            }
+        }
+        unset($item);
+
+        if (!$updated) {
+            flash('error', '編集対象のニュースが見つかりません。');
+            redirect_admin(['panel' => 'news']);
+        }
+
+        nerdech_save_news($news);
+        flash('success', 'ニュースを更新しました。');
+        redirect_admin(['panel' => 'news']);
+    }
+
     if ($action === 'delete_news') {
         $id = (string) ($_POST['id'] ?? '');
         $news = array_values(array_filter(nerdech_load_news(true), fn($item) => ($item['id'] ?? '') !== $id));
@@ -300,6 +353,10 @@ button, input, textarea { font: inherit; }
 .list-title { font-weight: 500; line-height: 1.5; }
 .list-body { margin-top: 6px; color: #4b5563; line-height: 1.7; }
 .list-link { display: inline-block; margin-top: 7px; color: #2563eb; text-decoration: none; font-size: 11px; }
+.edit-news { margin-top: 14px; }
+.edit-news summary { width: fit-content; list-style: none; }
+.edit-news summary::-webkit-details-marker { display: none; }
+.edit-news__body { margin-top: 12px; padding: 14px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; }
 .badge { display: inline-flex; align-items: center; height: 20px; padding: 0 8px; border-radius: 999px; font-size: 10px; letter-spacing: 0.08em; background: #eef2ff; color: #4338ca; }
 .badge--muted { background: #f3f4f6; color: #6b7280; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
@@ -453,6 +510,43 @@ button, input, textarea { font: inherit; }
                     <?php if (!empty($item['link_url']) && !empty($item['link_label'])): ?>
                     <a class="list-link" href="<?= e((string) $item['link_url']) ?>" target="_blank" rel="noopener"><?= e((string) $item['link_label']) ?></a>
                     <?php endif; ?>
+                    <details class="edit-news">
+                        <summary class="btn btn--ghost">edit</summary>
+                        <div class="edit-news__body">
+                            <form class="form-grid" method="post">
+                                <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
+                                <input type="hidden" name="action" value="update_news">
+                                <input type="hidden" name="id" value="<?= e((string) ($item['id'] ?? '')) ?>">
+                                <div class="form-row">
+                                    <label class="label" for="edit-date-<?= e((string) ($item['id'] ?? '')) ?>">date</label>
+                                    <input class="input" id="edit-date-<?= e((string) ($item['id'] ?? '')) ?>" name="date" type="text" value="<?= e((string) ($item['date'] ?? '')) ?>" required>
+                                </div>
+                                <div class="form-row">
+                                    <label class="label" for="edit-title-<?= e((string) ($item['id'] ?? '')) ?>">title</label>
+                                    <input class="input" id="edit-title-<?= e((string) ($item['id'] ?? '')) ?>" name="title" type="text" value="<?= e((string) ($item['title'] ?? '')) ?>" required>
+                                </div>
+                                <div class="form-row">
+                                    <label class="label" for="edit-body-<?= e((string) ($item['id'] ?? '')) ?>">body</label>
+                                    <textarea class="textarea" id="edit-body-<?= e((string) ($item['id'] ?? '')) ?>" name="body" required><?= e((string) ($item['body'] ?? '')) ?></textarea>
+                                </div>
+                                <div class="form-split">
+                                    <div class="form-row">
+                                        <label class="label" for="edit-link-label-<?= e((string) ($item['id'] ?? '')) ?>">link label</label>
+                                        <input class="input" id="edit-link-label-<?= e((string) ($item['id'] ?? '')) ?>" name="link_label" type="text" value="<?= e((string) ($item['link_label'] ?? '')) ?>">
+                                    </div>
+                                    <div class="form-row">
+                                        <label class="label" for="edit-link-url-<?= e((string) ($item['id'] ?? '')) ?>">link url</label>
+                                        <input class="input" id="edit-link-url-<?= e((string) ($item['id'] ?? '')) ?>" name="link_url" type="url" value="<?= e((string) ($item['link_url'] ?? '')) ?>">
+                                    </div>
+                                </div>
+                                <label class="check">
+                                    <input type="checkbox" name="published" value="1" <?= !empty($item['published']) ? 'checked' : '' ?>>
+                                    公開する
+                                </label>
+                                <button class="btn btn--primary" type="submit">save changes →</button>
+                            </form>
+                        </div>
+                    </details>
                 </div>
                 <div class="actions">
                     <span class="badge<?= !empty($item['published']) ? '' : ' badge--muted' ?>"><?= !empty($item['published']) ? 'published' : 'draft' ?></span>
