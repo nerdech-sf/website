@@ -12,34 +12,38 @@
     <script>document.documentElement.classList.add('js');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="合同会社 nerdech のニュース一覧。Company Brain、事例、会社情報などの最新情報を掲載しています。">
+    <meta name="description" content="合同会社 nerdech 代表 木戸 隆正の挨拶。会社の知識をひとつの脳にする、という私たちの考えをお伝えします。">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://nerdech.co.jp/news.html">
+    <link rel="canonical" href="https://nerdech.co.jp/message.html">
+    <!-- ファビコン -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <!-- OGP -->
     <meta property="og:type"        content="website">
-    <meta property="og:url"         content="https://nerdech.co.jp/news.html">
-    <meta property="og:title"       content="ニュース | 合同会社 nerdech">
-    <meta property="og:description" content="合同会社 nerdech のニュース一覧。Company Brain、事例、会社情報などの最新情報を掲載しています。">
+    <meta property="og:url"         content="https://nerdech.co.jp/message.html">
+    <meta property="og:title"       content="代表挨拶 | 合同会社 nerdech">
+    <meta property="og:description" content="合同会社 nerdech 代表 木戸 隆正の挨拶。会社の知識をひとつの脳にする、という私たちの考えをお伝えします。">
     <meta property="og:image"       content="https://nerdech.co.jp/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale"      content="ja_JP">
     <meta property="og:site_name"   content="合同会社 nerdech">
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="ニュース | 合同会社 nerdech">
-    <meta name="twitter:description" content="合同会社 nerdech のニュース一覧。Company Brain、事例、会社情報などの最新情報を掲載しています。">
+    <meta name="twitter:title"       content="代表挨拶 | 合同会社 nerdech">
+    <meta name="twitter:description" content="合同会社 nerdech 代表 木戸 隆正の挨拶。会社の知識をひとつの脳にする、という私たちの考えをお伝えします。">
     <meta name="twitter:image"       content="https://nerdech.co.jp/og-image.png">
-    <title>ニュース | 合同会社 nerdech</title>
+    <title>代表挨拶 | 合同会社 nerdech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=20260925">
+    <link rel="stylesheet" href="p-company.css?v=20260925">
 </head>
 <body>
+    <!-- ===== 共通ヘッダー(全ページ同一。自ページのリンクに class="active" aria-current="page") ===== -->
     <header class="header">
         <a href="index.html" class="header__logo" aria-label="nerdech — トップへ">
             <span class="logo" aria-hidden="true">n</span>
@@ -54,42 +58,40 @@
             <a class="header-nav__btn" href="company-brain.html">company brain</a>
             <a class="header-nav__btn" href="services.html">services</a>
             <a class="header-nav__btn" href="works.html">works</a>
-            <a class="header-nav__btn" href="company.html">company</a>
-            <a class="header-nav__btn active" href="news.html" aria-current="page">news</a>
+            <a class="header-nav__btn active" href="company.html" aria-current="page">company</a>
+            <a class="header-nav__btn" href="news.html">news</a>
             <a class="header-nav__btn" href="contact.html">contact</a>
         </nav>
     </header>
 
     <main>
         <header class="page-hero">
-            <h1 class="page-hero__title">news</h1>
-            <p class="page-hero__sub">ニュース</p>
+            <h1 class="page-hero__title">message</h1>
+            <p class="page-hero__sub">代表挨拶</p>
+            <nav class="subnav" aria-label="会社情報">
+                <a class="subnav__link" href="company.html">概要</a>
+                <a class="subnav__link active" href="message.html" aria-current="page">代表挨拶</a>
+            </nav>
         </header>
 
-        <section class="block block--gray">
-            <div class="news-list news-list--archive" data-news-list data-news-heading="h2">
-                <article class="news-item">
-                    <time class="news-item__date" datetime="2026-09-25">2026.09.25</time>
-                    <div class="news-item__content">
-                        <h2 class="news-item__title">コーポレートサイトをリニューアルしました</h2>
-                        <p class="news-item__body">Company Brain の紹介、事例、会社情報のページを追加しました。</p>
-                    </div>
-                </article>
-                <article class="news-item">
-                    <time class="news-item__date" datetime="2026-04-30">2026.04.30</time>
-                    <div class="news-item__content">
-                        <h2 class="news-item__title">合同会社 nerdech を設立しました</h2>
-                        <p class="news-item__body">AIコンサルティング・受託開発を担う法人として、合同会社 nerdech の登記を完了しました。</p>
-                    </div>
-                </article>
-            </div>
+        <section class="block block--dark">
+            <p class="statement__text" data-reveal="up"><span class="ph">会社の知識を、</span><span class="ph">ひとつの脳にする。</span></p>
         </section>
 
-        <section class="cta-band" aria-label="お問い合わせ">
-            <a class="btn" href="contact.html" data-reveal="fade">お問い合わせ →</a>
+        <section class="block block--light">
+            <div class="block__grid">
+                <div class="letter" data-reveal="up">
+                    <p>会社の中には、その会社にしかない答えがあります。請求書をどの順で出すのか、この案件は誰が担当か、去年あの条件を断った理由は何か。けれどそれらは、共有フォルダ、個人のPC、メール、チャット、そして担当者の頭の中に散らばっています。</p>
+                    <p>AIが誰でも使える道具になった今、足りないのはAIの性能ではなく、AIに渡せる会社の知識だと私たちは考えています。会社の知識をひとつにまとめ、見てよい人にだけ答え、AIが会社の一員として働ける状態をつくる。それが nerdech が Company Brain で目指していることです。</p>
+                    <p>私たちは受託開発の現場で、ツールを納めて終わりにしない進め方を身につけてきました。使われ続けるところまで、お客様と一緒に走ります。</p>
+                    <p>AIを、道具からパートナーへ。まずは皆さまの会社の知識を、ひとつにするところから始めさせてください。</p>
+                    <p class="letter__sign">合同会社 nerdech 代表 木戸 隆正</p>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- ===== 共通フッター(全ページ同一) ===== -->
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__brand">
@@ -117,8 +119,8 @@
                     <li><a class="footer__sitemap-link" href="services.html">services</a></li>
                     <li><a class="footer__sitemap-link" href="works.html">works</a></li>
                     <li><a class="footer__sitemap-link" href="company.html">company</a></li>
-                    <li><a class="footer__sitemap-link" href="message.html">message</a></li>
-                    <li><a class="footer__sitemap-link" href="news.html" aria-current="page">news</a></li>
+                    <li><a class="footer__sitemap-link" href="message.html" aria-current="page">message</a></li>
+                    <li><a class="footer__sitemap-link" href="news.html">news</a></li>
                     <li><a class="footer__sitemap-link" href="contact.html">contact</a></li>
                 </ul>
             </nav>
