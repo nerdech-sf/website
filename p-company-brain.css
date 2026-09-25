@@ -67,3 +67,33 @@
 @media (max-width: 600px) {
     .page-hero__title--long { font-size: max(40px, calc(15vw - 8px)); }
 }
+
+
+/* ---- 場面A: 「問い」と「答え(散らばっている場所)」の階層を分ける ----
+   問い = 大きな明朝。答え = 小さめのゴシック + mono の番号。ずらしは使わない。 */
+.scene__question {
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    line-height: 1.5;
+}
+.scene__kicker { margin-top: 44px; margin-bottom: 0; }
+.scene > .scene__list { margin-top: 18px; counter-reset: sl; }
+.quote-list.scene__list .quote-list__item {
+    display: grid;
+    grid-template-columns: clamp(40px, 5vw, 64px) minmax(0, 1fr);
+    padding: clamp(16px, 2vw, 22px) 0;
+    font-family: var(--font-jp-sans);
+    font-weight: 400;
+    font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    color: var(--fg-mute);
+}
+.quote-list.scene__list .quote-list__item::before {
+    counter-increment: sl;
+    content: counter(sl, decimal-leading-zero);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    line-height: 2.2;
+    opacity: 0.6;
+}
