@@ -12,7 +12,7 @@
     <script>document.documentElement.classList.add('js');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Company Brain は、社内の資料をひとつの知識ベースにまとめ、質問した人が見てよい範囲で答える、社内ナレッジ集約AIです。">
+    <meta name="description" content="Company Brain は、デジタルとフィジカルの両方から会社全体を理解し、Software Agent と Physical AI を動かす、AIネイティブな業務オペレーティングシステムです。">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="canonical" href="https://nerdech.co.jp/company-brain.html">
@@ -24,25 +24,26 @@
     <!-- OGP -->
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="https://nerdech.co.jp/company-brain.html">
-    <meta property="og:title"       content="Company Brain — 社内ナレッジ集約AI | 合同会社 nerdech">
-    <meta property="og:description" content="Company Brain は、社内の資料をひとつの知識ベースにまとめ、質問した人が見てよい範囲で答える、社内ナレッジ集約AIです。">
+    <meta property="og:title"       content="Company Brain — 企業のAIオペレーティングシステム | 合同会社 nerdech">
+    <meta property="og:description" content="Company Brain は、デジタルとフィジカルの両方から会社全体を理解し、Software Agent と Physical AI を動かす、AIネイティブな業務オペレーティングシステムです。">
     <meta property="og:image"       content="https://nerdech.co.jp/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale"      content="ja_JP">
     <meta property="og:site_name"   content="合同会社 nerdech">
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="Company Brain — 社内ナレッジ集約AI | 合同会社 nerdech">
-    <meta name="twitter:description" content="Company Brain は、社内の資料をひとつの知識ベースにまとめ、質問した人が見てよい範囲で答える、社内ナレッジ集約AIです。">
+    <meta name="twitter:title"       content="Company Brain — 企業のAIオペレーティングシステム | 合同会社 nerdech">
+    <meta name="twitter:description" content="Company Brain は、デジタルとフィジカルの両方から会社全体を理解し、Software Agent と Physical AI を動かす、AIネイティブな業務オペレーティングシステムです。">
     <meta name="twitter:image"       content="https://nerdech.co.jp/og-image.png">
-    <title>Company Brain — 社内ナレッジ集約AI | 合同会社 nerdech</title>
+    <title>Company Brain — 企業のAIオペレーティングシステム | 合同会社 nerdech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=20260925">
-    <link rel="stylesheet" href="p-company-brain.css?v=20260925b">
+    <link rel="stylesheet" href="ambient.css?v=20260928">
+    <link rel="stylesheet" href="note.css?v=20260928c">
 </head>
-<body>
+<body class="is-note">
     <!-- ===== 共通ヘッダー(全ページ同一。自ページのリンクに class="active" aria-current="page") ===== -->
     <header class="header">
         <a href="index.html" class="header__logo" aria-label="nerdech — トップへ">
@@ -64,161 +65,100 @@
         </nav>
     </header>
 
-    <main>
-        <header class="page-hero">
-            <h1 class="page-hero__title page-hero__title--long">company brain</h1>
-            <p class="page-hero__sub">社内ナレッジ集約AI</p>
-        </header>
-
-        <!-- リード + 製品画面 -->
-        <section class="block block--dark cb-intro" aria-label="Company Brain の概要">
-            <p class="lead" data-reveal="up">Company Brain は、社内の資料をひとつの知識ベースにまとめ、質問した人が見てよい範囲で答える、社内ナレッジ集約AIです。</p>
-            <figure class="frame" data-reveal="up" style="--d:120ms">
-                <img src="assets/cake-chat.png" width="2880" height="1800" decoding="async" alt="Company Brain の画面。質問への回答に引用元と権限の表示が付いている">
-            </figure>
+    <main class="note note--think">
+        <section class="note-hero" aria-labelledby="hero-title">
+            <div class="note-hero__text">
+                <nav class="note__path" aria-label="現在地"><a href="index.html">nerdech</a><span aria-hidden="true">/</span><span>THINK</span></nav>
+                <p class="note-hero__label"><b>03 THINK</b>Company Brain</p>
+                <h1 class="note-hero__title" id="hero-title"><span class="ph">企業の、</span><span class="ph">AIオペレーティング</span><span class="ph">システム。</span></h1>
+                <p class="note-hero__en" lang="en">One brain for the digital and the physical.</p>
+                <p class="note-hero__lead">Company Brain は、デジタルとフィジカルの両方から会社全体を理解し、Software Agent と Physical AI を動かします。</p>
+            </div>
+            <div class="note-hero__visual" data-visual="think" role="img" aria-label="上に Company Brain があり、左下のデジタルの世界(メール・Slack・CRM など)と右下のフィジカルの世界(ロボット・センサー・デバイス)に指示を出し、状態を受け取る図"></div>
         </section>
 
-        <!-- A. 一元管理とは、何か。 -->
-        <section class="block block--dark" id="unification">
-            <div class="block__grid">
-                <div class="block__head" data-reveal="left">
-                    <h2 class="block__title"><span class="ph">一元管理とは、</span><span class="ph">何か。</span></h2>
+        <div class="note__layout">
+            <aside class="note__side" aria-label="このページの構成">
+                <div>
+                    <p class="pane__title">LOCAL GRAPH</p>
+                    <div class="local-graph" data-center="THINK" role="img" aria-label="このページの項目のつながり。点を押すとその項目へ移動します"></div>
                 </div>
-                <div class="block__body">
-                    <div class="scene">
-                        <h3 class="block__subtitle scene__question" data-reveal="up">会社の知識は、いまどこにありますか。</h3>
-                        <p class="block__kicker scene__kicker" data-reveal="up">たとえば</p>
-                        <ul class="quote-list quote-list--plain scene__list" data-reveal-each="up,up,up,up,up">
-                            <li class="quote-list__item">共有フォルダにある、最終版とは限らないファイル</li>
-                            <li class="quote-list__item">個人のPCにだけ入っている、見積の元データ</li>
-                            <li class="quote-list__item">メールに添付されたまま止まっている、合意内容</li>
-                            <li class="quote-list__item">チャットの流れに埋もれた、決定事項</li>
-                            <li class="quote-list__item">「あの人に聞けばわかる」という記憶</li>
-                        </ul>
-                        <p class="text" data-reveal="up">探すのに時間がかかる。聞く相手が決まってしまう。その人が辞めると、経緯ごと消える。AIを入れても、社内のことは答えられない。</p>
+                <nav aria-label="目次">
+                    <p class="pane__title pane__title--outline">OUTLINE</p>
+                    <div class="outline"></div>
+                </nav>
+            </aside>
+            <article class="note__body">
+                <div class="note__head">
+                    <dl class="props">
+                        <dt>位置付け</dt><dd>AIネイティブな業務オペレーティングシステム</dd>
+                        <dt>理解するもの</dt><dd>デジタルとフィジカルの両方にわたる、会社全体の状態</dd>
+                        <dt>動かすもの</dt><dd>Software Agent・Physical AI</dd>
+                    </dl>
+                </div>
+                <div class="note__main">
+                    <h2 id="about" data-node="Company Brainとは">Company Brain とは</h2>
+                    <p>Company Brain は、社内検索ツールでも、ナレッジ検索でもありません。企業全体を理解し、Software Agent と Physical AI を動かす、AIネイティブな業務オペレーティングシステムです。</p>
+                    <p>コンピューターのOSがアプリや周辺機器をまとめて動かすように、Company Brain は、会社の中で働くAIをまとめて動かします。</p>
+
+                    <h2 id="two-worlds" data-node="2つの世界">デジタルとフィジカルの司令塔</h2>
+                    <div class="groups">
+                        <div class="group"><p class="group__step">DIGITAL WORLD</p><h3 class="group__title">Software Agent が操作する</h3><ul class="bullets"><li>メール</li><li>Slack</li><li>ブラウザ</li><li>CRM・ERP</li><li>業務システム</li><li>ドキュメント</li></ul></div>
+                        <div class="group"><p class="group__step">PHYSICAL WORLD</p><h3 class="group__title">Physical AI が動かす</h3><ul class="bullets"><li>ロボット</li><li>センサー</li><li>デバイス</li><li>Physical AI</li></ul></div>
+                    </div>
+                    <p>その両方の司令塔として、Company Brain があります。</p>
+
+                    <h2 id="system" data-node="しくみ">しくみ</h2>
+                    <ol class="stages">
+                        <li><span class="stages__step">LAYER 01<b>Understand</b></span><p class="stages__body">デジタルとフィジカルの両方から、会社全体の状態を理解する。</p></li>
+                        <li><span class="stages__step">LAYER 02<b>Decide</b></span><p class="stages__body">その状態をもとに、次に何をするべきかを判断する。</p></li>
+                        <li class="is-brain"><span class="stages__step">LAYER 03<b>Operate</b></span><p class="stages__body">デジタルの業務は Software Agent に、現場の作業は Physical AI に指示し、実行させる。</p></li>
+                    </ol>
+
+                    <h2 id="goal" data-node="目指すもの">目指すもの</h2>
+                    <p>長期的には、PC 業務・判断・指示・現場作業など、人が会社を動かすために行っているオペレーションを Software Agent と Physical AI へ移し、人によるオペレーションを限りなくゼロに近づけることを目指しています。</p>
+                    <div class="shift" role="table" aria-label="人が行っている仕事と、移っていく先">
+                        <div class="shift__row shift__head" role="row"><span role="columnheader">いま人が行っている仕事</span><span aria-hidden="true"></span><span role="columnheader">移っていく先</span></div>
+                        <div class="shift__row" role="row"><span class="shift__from" role="cell">PC 業務</span><span class="shift__arrow" aria-hidden="true">→</span><span class="shift__to" role="cell"><b>Software Agent</b></span></div>
+                        <div class="shift__row" role="row"><span class="shift__from" role="cell">現場作業</span><span class="shift__arrow" aria-hidden="true">→</span><span class="shift__to" role="cell"><b>Physical AI</b></span></div>
+                        <div class="shift__row" role="row"><span class="shift__from" role="cell">判断・指示</span><span class="shift__arrow" aria-hidden="true">→</span><span class="shift__to" role="cell"><b>Company Brain</b> が判断し、Software Agent と Physical AI へ</span></div>
                     </div>
 
-                    <div class="scene">
-                        <h3 class="block__subtitle" data-reveal="up">一元管理は、資料を一か所に移すことではありません。</h3>
-                        <p class="text" data-reveal="up" style="--d:100ms">フォルダを整理し直しても、翌日から新しい資料は増えます。ルールを決めても、守る負担は現場に残ります。置き場所を揃える作業は、終わりません。</p>
+                    <h2 id="worlds" data-node="3つの事業">nerdech の 3 つの事業</h2>
+                    <p>デジタルの世界は BUILD が一元管理の土台をつくり、フィジカルの世界は PERCEIVE がデータをつくります。その上で、Company Brain が Software Agent と Physical AI の両方を統合して動かします。</p>
+                    <div class="worlds">
+                        <a class="worlds__top" href="company-brain.html" aria-current="page"><span class="worlds__world">DIGITAL + PHYSICAL</span><span class="worlds__name">03 THINK · COMPANY BRAIN</span><span class="worlds__what">デジタルとフィジカルの両方を理解し、Software Agent と Physical AI をまとめて動かす</span></a>
+                        <div class="worlds__cols">
+                            <a class="worlds__col worlds__col--build" href="services.html"><span class="worlds__world">DIGITAL WORLD</span><span class="worlds__name">01 BUILD</span><span class="worlds__what">企業のデジタル業務を構造化し、一元管理する</span><ol class="worlds__chain"><li>企業の業務</li><li>データ・システム・コミュニケーション</li><li>一元管理</li><li>Software Agent</li></ol></a>
+                            <a class="worlds__col worlds__col--perceive" href="perceive.html"><span class="worlds__world">PHYSICAL WORLD</span><span class="worlds__name">02 PERCEIVE</span><span class="worlds__what">現実世界の動作をデータにする</span><ol class="worlds__chain"><li>現実世界の作業</li><li>Pressure / Video / Action / Context</li><li>Dataset</li><li>Physical AI</li></ol></a>
+                        </div>
                     </div>
 
-                    <div class="scene">
-                        <h3 class="block__subtitle" data-reveal="up">一元管理とは、会社にひとつだけ持つものが3つあること。</h3>
-                        <ol class="bignum">
-                            <li class="bignum__item" data-reveal="right">
-                                <span class="bignum__num" aria-hidden="true">1</span>
-                                <div>
-                                    <h4 class="bignum__title">入口がひとつ</h4>
-                                    <p class="bignum__body">資料がどこにあるかを知らなくても、聞けば答えが返り、根拠になった資料が示されます。</p>
-                                </div>
-                            </li>
-                            <li class="bignum__item" data-reveal="right">
-                                <span class="bignum__num" aria-hidden="true">2</span>
-                                <div>
-                                    <h4 class="bignum__title">見てよい範囲の決め方がひとつ</h4>
-                                    <p class="bignum__body">誰がどの資料を見てよいかを、一か所で決めます。質問した人が見てよい資料だけを使って答え、見てはいけない資料は、回答にも引用にも出しません。</p>
-                                </div>
-                            </li>
-                            <li class="bignum__item" data-reveal="right">
-                                <span class="bignum__num" aria-hidden="true">3</span>
-                                <div>
-                                    <h4 class="bignum__title">会社の形の見え方がひとつ</h4>
-                                    <p class="bignum__body">集まった資料から、業務の流れと、資料が足りない工程、特定の人に集中している知識が見えます。</p>
-                                </div>
-                            </li>
-                        </ol>
-                    </div>
+                    <section class="closing" id="contact" aria-labelledby="closing-title">
+                        <p class="closing__title" id="closing-title">Company Brain について</p>
+                        <p>Company Brain についてのご相談・お問い合わせを受け付けています。</p>
+                        <a class="note-cta" href="contact.html">Talk with nerdech →</a>
+                    </section>
 
-                    <div class="scene">
-                        <h3 class="block__subtitle" data-reveal="up">その上で、AIが働く。</h3>
-                        <p class="text" data-reveal="up" style="--d:100ms">一元管理は、答えるための準備ではなく、AIに仕事を任せるための前提です。会社の知識がひとつになれば、質問への回答だけでなく、資料をもとにした文書の下書きや、手元のファイルの整理まで、AIに任せられます。</p>
-                    </div>
+                    <section class="backlinks" aria-label="関連するページ">
+                        <p class="pane__title">LINKED</p>
+                        <div class="backlinks__list">
+                            <a href="services.html" data-node="BUILD"><span class="backlinks__name">01 BUILD</span><span class="backlinks__desc">AI Development &amp; Consulting</span></a>
+                            <a href="perceive.html" data-node="PERCEIVE"><span class="backlinks__name">02 PERCEIVE</span><span class="backlinks__desc">Physical AI Data</span></a>
+                            <a href="vision.html" data-node="VISION"><span class="backlinks__name">VISION</span><span class="backlinks__desc">学び直す必要のない世界へ</span></a>
+                        </div>
+                    </section>
                 </div>
+            </article>
+        </div>
+        <section class="finale" aria-label="nerdech">
+            <div class="finale__stage">
+                <div class="finale__glow" aria-hidden="true"></div>
+                <p class="finale__word"><span class="sr-only">nerdech</span><span aria-hidden="true">n</span><span aria-hidden="true">e</span><span aria-hidden="true">r</span><span aria-hidden="true">d</span><span aria-hidden="true">e</span><span aria-hidden="true">c</span><span aria-hidden="true">h</span></p>
+                <p class="finale__line">ONE BRAIN FOR THE DIGITAL AND THE PHYSICAL.</p>
+                <button class="finale__sound" type="button" aria-pressed="false"><span class="finale__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="finale__sound-label">SOUND OFF</span></button>
+                <p class="finale__note">音はボタンを押したときだけ流れます</p>
             </div>
-        </section>
-
-        <!-- B. できること -->
-        <section class="block block--light">
-            <div class="block__intro" data-reveal="up">
-                <h2 class="block__title">できること</h2>
-            </div>
-
-            <div class="feature" data-reveal="left">
-                <div class="feature__text">
-                    <h3 class="feature__title">聞けば、根拠つきで答える。</h3>
-                    <p class="feature__body">質問を日本語で入力すると、社内の資料から答えを作り、引用元の資料を一緒に示します。根拠をその場で開いて確かめられるので、答えを鵜呑みにする必要がありません。</p>
-                </div>
-                <div class="feature__media">
-                    <figure class="frame">
-                        <img src="assets/cake-answer.png" width="1484" height="1208" decoding="async" loading="lazy" alt="質問に対する回答と引用元。閲覧権限が表示されている">
-                    </figure>
-                </div>
-            </div>
-
-            <div class="feature feature--reverse" data-reveal="right">
-                <div class="feature__text">
-                    <h3 class="feature__title">見てよい人にだけ、答える。</h3>
-                    <p class="feature__body">回答には、質問した人が閲覧できる資料だけが使われます。引用元の資料にも閲覧できる範囲が表示され、見てはいけない資料が回答や引用に現れることはありません。</p>
-                </div>
-                <div class="feature__media">
-                    <blockquote class="pullquote">
-                        <p>権限のない資料は、回答にも引用にも出しません。</p>
-                    </blockquote>
-                </div>
-            </div>
-
-            <div class="feature" data-reveal="left">
-                <div class="feature__text">
-                    <h3 class="feature__title">資料から、会社の業務が見えてくる。</h3>
-                    <p class="feature__body">取り込んだ資料から、AIが業務の流れを推定し、工程ごとに資料が足りているかを判定します。図の「契約締結」のように、資料が足りない工程は、誰かに聞く前に見つかります。</p>
-                </div>
-                <div class="feature__media">
-                    <figure class="frame">
-                        <img src="assets/cake-flow.png" width="2880" height="1800" decoding="async" loading="lazy" alt="資料から推定した業務フロー。契約締結の工程に「資料不足」の表示">
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <!-- C. はじめ方 -->
-        <section class="block block--dark">
-            <div class="block__intro" data-reveal="up">
-                <p class="block__kicker">はじめ方</p>
-                <h2 class="block__title">フォルダを選ぶだけで、取り込みが始まる。</h2>
-            </div>
-            <ol class="steps cb-steps" data-reveal-each="up" data-reveal-step="100">
-                <li class="step">
-                    <span class="step__num" aria-hidden="true">1</span>
-                    <h3 class="step__title">取り込むフォルダを選ぶ</h3>
-                </li>
-                <li class="step">
-                    <span class="step__num" aria-hidden="true">2</span>
-                    <h3 class="step__title">AIが資料を読み取り、種類と内容を整理する</h3>
-                </li>
-                <li class="step">
-                    <span class="step__num" aria-hidden="true">3</span>
-                    <h3 class="step__title">取り込みが終われば、質問できる</h3>
-                </li>
-            </ol>
-            <p class="text cb-steps-note" data-reveal="up">エンジニアがいない会社でも使えるように、設定は最小限にしています。</p>
-        </section>
-
-        <!-- D. こんな質問に答えます -->
-        <section class="block block--light">
-            <div class="block__intro" data-reveal="up">
-                <h2 class="block__title">こんな質問に答えます</h2>
-            </div>
-            <ul class="quote-list quote-list--stagger" data-reveal-each="left,right">
-                <li class="quote-list__item">出張旅費の精算方法を教えて</li>
-                <li class="quote-list__item">請求書発行の流れを教えて</li>
-                <li class="quote-list__item">有給休暇の申請方法は?</li>
-                <li class="quote-list__item">経費精算のやり方を教えて</li>
-            </ul>
-        </section>
-
-        <section class="cta-band" aria-label="お問い合わせ">
-            <a class="btn" href="contact.html" data-reveal="fade">デモのご依頼・導入のご相談 →</a>
         </section>
     </main>
 
@@ -263,5 +203,10 @@
     </footer>
 
     <script src="site.js?v=20260925"></script>
+    <script src="ambient.js?v=20260928" defer></script>
+    <script src="note-graph.js?v=20260928" defer></script>
+    <script src="note-ui.js?v=20260928" defer></script>
+    <script src="finale.js?v=20260928" defer></script>
+    <script src="think-hero.js?v=20260928" defer></script>
 </body>
 </html>

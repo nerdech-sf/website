@@ -12,7 +12,7 @@
     <script>document.documentElement.classList.add('js');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="合同会社 nerdech の事業内容。社内ナレッジ集約AI「Company Brain」の開発・提供、導入支援、AIコンサルティング、受託開発。">
+    <meta name="description" content="nerdech の BUILD は、営業・開発・顧客対応・コミュニケーションなど会社の業務を一元管理し、AIがその状態を理解できるシステムをパッケージとして導入する事業です。">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="canonical" href="https://nerdech.co.jp/services.html">
@@ -24,25 +24,26 @@
     <!-- OGP -->
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="https://nerdech.co.jp/services.html">
-    <meta property="og:title"       content="事業内容 | 合同会社 nerdech">
-    <meta property="og:description" content="合同会社 nerdech の事業内容。社内ナレッジ集約AI「Company Brain」の開発・提供、導入支援、AIコンサルティング、受託開発。">
+    <meta property="og:title"       content="BUILD — AI Development &amp; Consulting | 合同会社 nerdech">
+    <meta property="og:description" content="nerdech の BUILD は、営業・開発・顧客対応・コミュニケーションなど会社の業務を一元管理し、AIがその状態を理解できるシステムをパッケージとして導入する事業です。">
     <meta property="og:image"       content="https://nerdech.co.jp/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale"      content="ja_JP">
     <meta property="og:site_name"   content="合同会社 nerdech">
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="事業内容 | 合同会社 nerdech">
-    <meta name="twitter:description" content="合同会社 nerdech の事業内容。社内ナレッジ集約AI「Company Brain」の開発・提供、導入支援、AIコンサルティング、受託開発。">
+    <meta name="twitter:title"       content="BUILD — AI Development &amp; Consulting | 合同会社 nerdech">
+    <meta name="twitter:description" content="nerdech の BUILD は、営業・開発・顧客対応・コミュニケーションなど会社の業務を一元管理し、AIがその状態を理解できるシステムをパッケージとして導入する事業です。">
     <meta name="twitter:image"       content="https://nerdech.co.jp/og-image.png">
-    <title>事業内容 | 合同会社 nerdech</title>
+    <title>BUILD — AI Development &amp; Consulting | 合同会社 nerdech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=20260925">
-    <link rel="stylesheet" href="p-services.css?v=20260925">
+    <link rel="stylesheet" href="ambient.css?v=20260928">
+    <link rel="stylesheet" href="note.css?v=20260928c">
 </head>
-<body>
+<body class="is-note">
     <!-- ===== 共通ヘッダー(全ページ同一。自ページのリンクに class="active" aria-current="page") ===== -->
     <header class="header">
         <a href="index.html" class="header__logo" aria-label="nerdech — トップへ">
@@ -64,108 +65,233 @@
         </nav>
     </header>
 
-    <main>
-        <header class="page-hero">
-            <h1 class="page-hero__title">services</h1>
-            <p class="page-hero__sub">事業内容</p>
-        </header>
-
-        <!-- 事業内容 (TOP の4枚カードと番号を揃える) -->
-        <section class="block block--light" aria-labelledby="services-list-title">
-            <h2 class="sr-only" id="services-list-title">事業内容</h2>
-            <ol class="rows rows--split" data-reveal-each="left,right" data-reveal-step="60">
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">01</span>
-                    <h3 class="row__title">Company Brain の開発・提供</h3>
-                    <p class="row__body">社内ナレッジ集約AIを開発し、提供します。</p>
-                </li>
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">02</span>
-                    <h3 class="row__title">導入支援</h3>
-                    <p class="row__body">資料の棚卸し、取り込み、閲覧範囲の設計、社内で使われ続けるまでの運用を支援します。</p>
-                </li>
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">03</span>
-                    <h3 class="row__title">AIコンサルティング</h3>
-                    <p class="row__body">業務課題の整理からAI活用方針、PoC設計、モデル・API選定まで支援します。使えるAIに落とし込むための技術判断を伴走します。</p>
-                </li>
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">04</span>
-                    <h3 class="row__title">受託開発</h3>
-                    <p class="row__body">Webアプリ、管理画面、業務システム、バックエンドAPIまで、企画から実装・改善までまとめて対応します。</p>
-                </li>
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">05</span>
-                    <h3 class="row__title">AIプロトタイプ</h3>
-                    <p class="row__body">チャットボット、画像・音声解析、業務自動化、レポート生成など、検証に必要なプロトタイプを短いサイクルで実装します。</p>
-                </li>
-            </ol>
-        </section>
-
-        <!-- 進め方 -->
-        <section class="block block--dark">
-            <div class="block__intro" data-reveal="up">
-                <h2 class="block__title">進め方</h2>
+    <main class="note note--build">
+        <section class="note-hero" aria-labelledby="hero-title">
+            <div class="note-hero__text">
+                <nav class="note__path" aria-label="現在地"><a href="index.html">nerdech</a><span aria-hidden="true">/</span><span>BUILD</span></nav>
+                <p class="note-hero__label"><b>01 BUILD</b>AI Development &amp; Consulting</p>
+                <h1 class="note-hero__title" id="hero-title"><span class="ph">散らばった業務を、</span><span class="ph">AIが理解できる</span><span class="ph">ひとつの状態へ。</span></h1>
+                <p class="note-hero__en" lang="en">Turn operations into structured intelligence.</p>
+                <p class="note-hero__lead">営業・プロジェクト・顧客対応・コミュニケーション。会社の業務を一元管理し、AIがその状態を理解できるシステムを導入します。</p>
             </div>
-            <ol class="steps" data-reveal-each="up" data-reveal-step="100">
-                <li class="step">
-                    <span class="step__num" aria-hidden="true">1</span>
-                    <h3 class="step__title">ヒアリング</h3>
-                    <p class="step__body">課題と現状の業務を伺います。</p>
-                </li>
-                <li class="step">
-                    <span class="step__num" aria-hidden="true">2</span>
-                    <h3 class="step__title">提案・お見積り</h3>
-                    <p class="step__body">進め方、体制、期間、費用をご提案します。</p>
-                </li>
-                <li class="step">
-                    <span class="step__num" aria-hidden="true">3</span>
-                    <h3 class="step__title">開発</h3>
-                    <p class="step__body">短いサイクルで動くものを見ていただきながら進めます。</p>
-                </li>
-                <li class="step">
-                    <span class="step__num" aria-hidden="true">4</span>
-                    <h3 class="step__title">納品・運用</h3>
-                    <p class="step__body">検収後の運用・改善まで対応します。</p>
-                </li>
-            </ol>
+            <div class="note-hero__visual" data-visual="build" role="img" aria-label="Slack・電話・メール・議事録・CRM・タスク・開発情報から、データが中央の STATE に集まり、SALES・PROJECT・CLIENT・TASK・COMMUNICATION の状態が更新されていく図"></div>
         </section>
 
-        <!-- 開発実績のある領域 -->
-        <section class="block block--light">
-            <div class="block__intro" data-reveal="up">
-                <h2 class="block__title">開発実績のある領域</h2>
+        <div class="note__layout">
+            <aside class="note__side" aria-label="このページの構成">
+                <div>
+                    <p class="pane__title">LOCAL GRAPH</p>
+                    <div class="local-graph" data-center="BUILD" role="img" aria-label="このページの項目のつながり。点を押すとその項目へ移動します"></div>
+                </div>
+                <nav aria-label="目次">
+                    <p class="pane__title pane__title--outline">OUTLINE</p>
+                    <div class="outline"></div>
+                </nav>
+            </aside>
+            <article class="note__body">
+                <div class="note__head">
+                    <dl class="props">
+                        <dt>事業</dt><dd>業務を一元管理するシステムの、パッケージ導入</dd>
+                        <dt>対象</dt><dd>営業・開発・顧客対応・コミュニケーション</dd>
+                        <dt>個社向け開発</dt><dd>必要な場合のみ</dd>
+                    </dl>
+                </div>
+                <div class="note__main">
+                    <h2 id="problem" data-node="課題">業務は、ばらばらの場所にある</h2>
+                    <p>会社の中では、次のような情報が、それぞれ別のツールや担当者に分かれています。</p>
+                    <ul class="chips"><li>営業</li><li>顧客対応</li><li>プロジェクト管理</li><li>開発</li><li>チャット</li><li>議事録</li><li>タスク</li><li>案件情報</li></ul>
+                    <p>BUILD では、これらを一元管理し、「今、会社で何が起きているのか」を 1 つのシステムから把握できる状態をつくります。</p>
+
+                    <h2 id="system" data-node="一元管理システム">BUILD が導入するもの</h2>
+                    <p>単なるデータベースではありません。特徴は次の 3 つです。</p>
+                    <ol class="items">
+                        <li id="sys-update" data-node="自動で更新" data-parent="system"><h3><span class="num">01</span>AIが、状態を自動で更新する</h3><p>議事録・チャット・電話の内容・タスク・顧客情報・案件の進捗から、AIが業務の状態を読み取り、更新し続けます。</p></li>
+                        <li id="sys-ask" data-node="質問できる" data-parent="system"><h3><span class="num">02</span>自然言語で、AIに質問できる</h3><p>「A社の案件は今どうなっている？」のように聞けば、最新の状態をもとにAIが答えます。</p></li>
+                        <li id="sys-one" data-node="ひとつの画面" data-parent="system"><h3><span class="num">03</span>会社の状態を、ひとつの画面で</h3><p>営業・開発・顧客対応・コミュニケーションを、ツールごとに見に行く必要がなくなります。</p></li>
+                    </ol>
+
+                    <h2 id="packages" data-node="パッケージ例">パッケージの導入例</h2>
+                    <p>導入できるシステムの例です。名称や構成は検討中のものを含み、導入先の業務に合わせて調整します。画面はイメージで、データはすべてサンプルです。</p>
+                    <div data-tabs>
+                        <div class="tabs" role="tablist" aria-label="パッケージの導入例">
+                            <button role="tab" id="tab-sales" aria-controls="pk-sales">EXAMPLE 01<small>SALES INTELLIGENCE</small></button>
+                            <button role="tab" id="tab-call" aria-controls="pk-call">EXAMPLE 02<small>CALL INTELLIGENCE</small></button>
+                            <button role="tab" id="tab-project" aria-controls="pk-project">EXAMPLE 03<small>PROJECT INTELLIGENCE</small></button>
+                            <button role="tab" id="tab-comm" aria-controls="pk-comm">EXAMPLE 04<small>COMMUNICATION HUB</small></button>
+                        </div>
+                        <div role="tabpanel" id="pk-sales" aria-labelledby="tab-sales">
+                            <h3>営業一元管理 <span class="status-tag status-tag--plan">導入例</span></h3>
+                            <p>営業担当が取得した情報を、ひとつに集めて管理します。AIが商談の記録や連絡を読み取り、案件の状態を自動で更新します。</p>
+                            <div class="io">
+                                <div class="io__col"><p>INPUT</p><ul class="chips"><li>オンライン商談の議事録</li><li>対面商談の議事録</li><li>営業メモ</li><li>メール</li><li>チャット</li><li>電話内容</li><li>テレアポ結果</li><li>問い合わせ</li><li>フォーム営業結果</li></ul></div>
+                                <div class="io__arrow" aria-hidden="true"></div>
+                                <div class="io__col io__col--out"><p>AI が更新する項目</p><ul class="chips"><li>企業名</li><li>担当者</li><li>案件内容</li><li>案件種別</li><li>受託 / コンサル / 協業</li><li>商談ステータス</li><li>売上見込み</li><li>受注確度</li><li>優先順位</li><li>次のアクション</li><li>期限</li><li>決定事項</li><li>未決事項</li></ul></div>
+                            </div>
+                            <div class="mock">
+                                <div class="mock__bar"><b>SALES INTELLIGENCE</b><span>ダッシュボード</span><span class="label-sample">画面イメージ · サンプルデータ</span></div>
+                                <div class="mock__body">
+                                    <div class="mock__grid">
+                                        <div class="kpi"><span>進行中の案件</span><b>18</b></div>
+                                        <div class="kpi"><span>今月の受注見込み</span><b>677万</b></div>
+                                        <div class="kpi kpi--alert"><span>停滞している案件</span><b>3</b></div>
+                                        <div class="kpi"><span>今週のフォロー</span><b>7</b></div>
+                                    </div>
+                                    <div class="mtable-wrap"><table class="mtable">
+                                        <thead><tr><th>企業</th><th>種別</th><th>ステータス</th><th>確度</th><th>見込み</th><th>次のアクション</th><th>期限</th></tr></thead>
+                                        <tbody>
+                                            <tr><td>D社</td><td>受託</td><td><span class="pill">最終確認</span></td><td><span class="meter"><i style="width:85%"></i></span> 85%</td><td>260万</td><td>契約書の送付</td><td>10/01</td></tr>
+                                            <tr><td>A社</td><td>受託</td><td><span class="pill">提案中</span></td><td><span class="meter"><i style="width:70%"></i></span> 70%</td><td>420万</td><td>見積の再提出</td><td>10/03</td></tr>
+                                            <tr><td>B社</td><td>コンサル</td><td><span class="pill pill--mute">初回面談済</span></td><td><span class="meter"><i style="width:40%"></i></span> 40%</td><td>180万</td><td>課題のヒアリング</td><td>10/06</td></tr>
+                                            <tr><td>C社</td><td>協業</td><td><span class="pill pill--warn">停滞 14日</span></td><td><span class="meter"><i style="width:30%"></i></span> 30%</td><td>300万</td><td>担当者へ再連絡</td><td>期限切れ</td></tr>
+                                        </tbody>
+                                    </table></div>
+                            <div class="qa">
+                                <ul class="qa__q" aria-label="AIへの質問の例"><li><button type="button" data-q="sales0">A社の案件は今どうなっている？</button></li><li><button type="button" data-q="sales1">今月受注可能性が高い案件を教えて</button></li><li><button type="button" data-q="sales2">2週間以上進捗がない案件は？</button></li><li><button type="button" data-q="sales3">今週フォローすべき顧客は？</button></li><li><button type="button" data-q="sales4">来月までの売上見込みはいくら？</button></li></ul>
+                                <div class="qa__a" aria-live="polite" data-empty="true">質問を選ぶと、AIの回答イメージが表示されます。</div>
+                                <template data-for="sales0"><span class="who">AI · サンプルの回答</span><span class="ans">A社は「提案中」です。9/24 の商談で見積の見直しを依頼され、10/3 までに再提出する予定です。受注確度は 70%、見込みは 420 万円です。</span><span class="src">参照: 9/24 オンライン商談の議事録・営業メモ</span></template><template data-for="sales1"><span class="who">AI · サンプルの回答</span><span class="ans">確度 70% 以上は 2 件です。D社（85%・契約書の送付待ち）と A社（70%・見積の再提出待ち）。</span><span class="src">参照: 案件データ（自動更新）</span></template><template data-for="sales2"><span class="who">AI · サンプルの回答</span><span class="ans">C社です。最後の接点は 14 日前の電話で、予定していた再連絡の期限が過ぎています。</span><span class="src">参照: 通話記録・メール</span></template><template data-for="sales3"><span class="who">AI · サンプルの回答</span><span class="ans">今週が期限の案件は 3 件です。D社（契約書の送付）、A社（見積の再提出）、C社（再連絡・期限切れ）。</span><span class="src">参照: 案件データ（次のアクション・期限）</span></template><template data-for="sales4"><span class="who">AI · サンプルの回答</span><span class="ans">4 件の見込み合計は 1,160 万円、受注確度で重み付けすると約 677 万円です。</span><span class="src">参照: 案件データ（見込み・確度）</span></template>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" id="pk-call" aria-labelledby="tab-call" hidden>
+                            <h3>AIテレアポ管理 <span class="status-tag status-tag--plan">導入例</span></h3>
+                            <p>AIまたは人が行った電話営業の内容を、一元管理します。電話が終わると、通話の内容から次の項目を自動で作り、営業案件と自動でひもづけます。単なる録音の管理ではなく、電話から受注までを 1 つのデータとして追えるようにします。</p>
+                            <div class="mock">
+                                <div class="mock__bar"><b>CALL INTELLIGENCE</b><span>通話記録</span><span class="label-sample">画面イメージ · サンプルデータ</span></div>
+                                <div class="mock__body">
+                                    <dl class="fieldlist">
+                                        <div><dt>通話先</dt><dd>E社 総務部</dd></div>
+                                        <div><dt>通話時間</dt><dd>4分12秒</dd></div>
+                                        <div><dt>要約</dt><dd>問い合わせ対応の負担に課題</dd></div>
+                                        <div><dt>相手の反応</dt><dd>前向き</dd></div>
+                                        <div><dt>ヒアリング結果</dt><dd>来月、社内で検討予定</dd></div>
+                                        <div><dt>興味度</dt><dd><span class="meter"><i style="width:65%"></i></span></dd></div>
+                                        <div><dt>面談設定</dt><dd>10/08 14:00</dd></div>
+                                        <div><dt>再架電</dt><dd>不要</dd></div>
+                                        <div><dt>次回アクション</dt><dd>資料を送付</dd></div>
+                                        <div><dt>引き継ぎ</dt><dd>営業担当へ（要点を添付）</dd></div>
+                                    </dl>
+                                    <ol class="trace" aria-label="この電話が案件になるまで">
+                                        <li>電話</li><li>商談</li><li>案件</li><li class="is-next">受注</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" id="pk-project" aria-labelledby="tab-project" hidden>
+                            <h3>開発案件一元管理 <span class="status-tag status-tag--plan">導入例</span></h3>
+                            <p>開発案件の開始日、いま何週目か、どのフェーズか、担当、期限、未完了のタスク、ブロッカー、顧客の要望、仕様変更、過去の意思決定までを一元管理します。Slack や Chatwork の会話、会議の議事録、タスク管理、顧客とのやり取りから、AIが案件の状態を自動で更新します。</p>
+                            <div class="mock">
+                                <div class="mock__bar"><b>PROJECT INTELLIGENCE</b><span>F社 業務システム開発</span><span class="label-sample">画面イメージ · サンプルデータ</span></div>
+                                <div class="mock__body">
+                                    <div class="week"><span>開始 7/21</span><span>WEEK 10</span><span>リリースまで 24 日</span></div>
+                                    <div class="phases"><span class="done">要件定義</span><span class="done">設計</span><span class="now">実装</span><span>テスト</span><span>検収</span><span>保守</span></div>
+                                    <div class="mock__grid" style="margin-top:12px">
+                                        <div class="kpi"><span>未完了タスク</span><b>12</b></div>
+                                        <div class="kpi kpi--alert"><span>ブロッカー</span><b>2</b></div>
+                                        <div class="kpi"><span>仕様変更</span><b>3</b></div>
+                                        <div class="kpi"><span>担当エンジニア</span><b>3</b></div>
+                                    </div>
+                            <div class="qa">
+                                <ul class="qa__q" aria-label="AIへの質問の例"><li><button type="button" data-q="proj0">この案件は今どのフェーズ？</button></li><li><button type="button" data-q="proj1">リリースまであと何日？</button></li><li><button type="button" data-q="proj2">遅れている原因は？</button></li><li><button type="button" data-q="proj3">クライアントから最後に言われた変更内容は？</button></li><li><button type="button" data-q="proj4">今止まっている案件は？</button></li><li><button type="button" data-q="proj5">担当者ごとの負荷を教えて</button></li></ul>
+                                <div class="qa__a" aria-live="polite" data-empty="true">質問を選ぶと、AIの回答イメージが表示されます。</div>
+                                <template data-for="proj0"><span class="who">AI · サンプルの回答</span><span class="ans">実装フェーズ（10 週目）です。要件定義と設計は完了しています。</span><span class="src">参照: タスク管理・定例の議事録</span></template><template data-for="proj1"><span class="who">AI · サンプルの回答</span><span class="ans">予定では 24 日です。ただし、ブロッカーが 2 件残っています。</span><span class="src">参照: スケジュール・タスク管理</span></template><template data-for="proj2"><span class="who">AI · サンプルの回答</span><span class="ans">外部 API の仕様確認待ち（顧客側）と、9/26 の定例で追加された画面の仕様変更の 2 点です。</span><span class="src">参照: Slack #f社-開発・9/26 定例の議事録</span></template><template data-for="proj3"><span class="who">AI · サンプルの回答</span><span class="ans">9/26 の定例で、帳票を PDF に加えて Excel でも出力したいと依頼されています。</span><span class="src">参照: 9/26 定例の議事録</span></template><template data-for="proj4"><span class="who">AI · サンプルの回答</span><span class="ans">顧客の確認待ちで 5 日以上止まっているのは、F社の外部 API 連携の 1 件です。</span><span class="src">参照: Chatwork・タスク管理</span></template><template data-for="proj5"><span class="who">AI · サンプルの回答</span><span class="ans">未完了のタスクは エンジニアA 7 件、B 4 件、C 1 件です。A に偏っています。</span><span class="src">参照: タスク管理</span></template>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" id="pk-comm" aria-labelledby="tab-comm" hidden>
+                            <h3>チャット・コミュニケーション統合 <span class="status-tag status-tag--plan">導入例</span></h3>
+                            <p>Slack、Chatwork、メールなどに散らばっている会話を、案件・顧客・プロジェクトごとに整理します。どのツールのどのチャンネルを見ればいいかを意識しなくても、案件の画面を開けば必要なことが分かります。</p>
+                            <div class="mock">
+                                <div class="mock__bar"><b>COMMUNICATION HUB</b><span>案件ビュー</span><span class="label-sample">画面イメージ · サンプルデータ</span></div>
+                                <div class="chub">
+                                    <div class="chub__src"><p>SOURCES</p><ul><li>sales-g社（Slack）</li><li>dev-g社（Slack）</li><li>G社様（Chatwork）</li><li>メール</li><li>議事録</li></ul></div>
+                                    <div class="chub__case">
+                                        <h4>G社 在庫管理システム</h4>
+                                        <div class="chub__block"><span class="k">最近の会話</span><p>来週の打ち合わせで画面案を確認したい <span class="from">— Chatwork・昨日</span></p></div>
+                                        <div class="chub__block"><span class="k">決定事項</span><p>初期リリースは在庫一覧と入出庫のみ <span class="from">— 9/20 議事録</span></p></div>
+                                        <div class="chub__block"><span class="k">未決事項</span><p>既存システムからのデータ移行の方法</p></div>
+                                        <div class="chub__block"><span class="k">顧客からの要望</span><p>スマホからも入出庫を登録したい <span class="from">— メール・9/25</span></p></div>
+                                        <div class="chub__block"><span class="k">タスク・期限</span><p>画面案の作成（10/04）<br>要件の確定（10/10）</p></div>
+                                        <div class="chub__block"><span class="k">担当者</span><p>営業 1 名・エンジニア 2 名</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="one" data-node="最終イメージ">会社全体を、ひとつのインターフェースで</h2>
+                    <p>最終的には、営業・開発・顧客対応・管理・コミュニケーションを別々に見るのではなく、会社全体の状態を 1 つのインターフェースから確認できる状態にします。</p>
+                    <div class="io io--one">
+                        <div class="io__col"><p>いまは別々</p><ul class="chips"><li>営業</li><li>開発</li><li>顧客対応</li><li>管理</li><li>コミュニケーション</li></ul></div>
+                        <div class="io__arrow" aria-hidden="true"></div>
+                        <div class="io__col io__col--out"><p>BUILD の導入後</p><ul class="chips"><li>会社全体の状態を、ひとつの画面で</li></ul></div>
+                    </div>
+
+                    <h2 id="custom" data-node="個社向けの開発">個社向けの開発</h2>
+                    <p>パッケージで対応できない業務がある場合は、必要に応じて個社向けの開発も行います。</p>
+                    <details class="fold">
+                        <summary>これまでの開発実績（企業名は非公開）</summary>
+                        <ol class="items" style="margin:0;padding:0 18px 12px">
+                            <li><h3>大手通信企業向け AI研修・業務支援MVP<span class="status">開発</span></h3><p>大手通信企業の新入社員向け研修領域で利用するAIシステムのMVPを開発しました。</p></li>
+                            <li><h3>大手企業向けAI導入<span class="status">設計・開発</span></h3><p>年商数百億円規模の企業を含む法人向けに、AIを既存業務へ導入するための業務整理・システム設計・開発を行っています。</p></li>
+                            <li><h3>営業自動化システム<span class="status status--design">設計</span></h3><p>電話営業・フォーム営業などの営業活動をAIで自動化し、面談化までのプロセスをデータ化するシステムを設計しています。</p></li>
+                            <li><h3>案件・営業 State 管理システム<span class="status status--design">設計</span></h3><p>商談議事録や営業担当者の情報から、案件の進捗・見込み・決定事項・次の行動などをAIで抽出・更新する仕組みを設計しています。</p></li>
+                            <li><h3>社内ナレッジ・業務支援AI<span class="status">開発</span></h3><p>社内資料や業務データを参照して、質問への回答や業務支援を行うAIシステムを開発しました。</p></li>
+                            <li><h3>Excel / Access を中心とした業務基盤の再構築<span class="status status--design">設計</span></h3><p>Excel・Access に依存していた業務データを整理し、可視化・データ基盤への移行を設計しています。</p></li>
+                            <li><h3>基幹システム・データベース移行<span class="status">開発</span></h3><p>既存業務システムへの機能追加や、SQL Server から MySQL への移行を行いました。</p></li>
+                            <li><h3>マッチングサービスの開発・保守<span class="status">開発・保守</span></h3><p>モバイルアプリ、Webサービス、管理画面、バックエンドを含むサービスの公開・追加開発・保守を担当しています。</p></li>
+                            <li><h3>海外営業支援AI<span class="status">開発</span></h3><p>海外顧客からの問い合わせに対して、多言語対応から回答案の生成、承認、返信までを一連の流れとして構築しました。</p></li>
+                        </ol>
+                    </details>
+                    <details class="fold">
+                        <summary>使用している技術</summary>
+                        <dl class="stack">
+                            <div><dt>Web・業務システム</dt><dd><ul class="tags"><li class="tag">React</li><li class="tag">Next.js</li><li class="tag">TypeScript</li><li class="tag">Python</li><li class="tag">FastAPI</li><li class="tag">PHP</li><li class="tag">MySQL</li></ul></dd></div>
+                            <div><dt>Windowsアプリ</dt><dd><ul class="tags"><li class="tag">VB.NET</li><li class="tag">Electron</li><li class="tag">Node.js</li><li class="tag">MSIX</li></ul></dd></div>
+                            <div><dt>モバイルアプリ</dt><dd><ul class="tags"><li class="tag">Expo(React Native)</li><li class="tag">Swift</li></ul></dd></div>
+                            <div><dt>クラウド</dt><dd><ul class="tags"><li class="tag">Google Cloud(Cloud Run・Firestore)</li><li class="tag">AWS(ECS・Aurora)</li><li class="tag">Firebase</li></ul></dd></div>
+                            <div><dt>AI</dt><dd><ul class="tags"><li class="tag">OpenAI API</li><li class="tag">Gemini API</li><li class="tag">Claude API</li><li class="tag">RAG</li><li class="tag">画像生成</li></ul></dd></div>
+                            <div><dt>データベース</dt><dd><ul class="tags"><li class="tag">MySQL</li><li class="tag">PostgreSQL</li><li class="tag">SQL Server</li><li class="tag">Firestore</li></ul></dd></div>
+                        </dl>
+                    </details>
+                    <p class="fineprint">「設計」は設計を進めている段階の案件です。そのほかの実績は <a class="wl" href="works.html">works</a> にあります。</p>
+
+                    <h2 id="worlds" data-node="3つの事業">nerdech の 3 つの事業</h2>
+                    <p>BUILD はデジタルの世界を担います。会社の業務を一元管理し、その先で Software Agent が働ける土台になります。</p>
+                    <div class="worlds">
+                        <a class="worlds__top" href="company-brain.html"><span class="worlds__world">DIGITAL + PHYSICAL</span><span class="worlds__name">03 THINK · COMPANY BRAIN</span><span class="worlds__what">デジタルとフィジカルの両方を理解し、Software Agent と Physical AI をまとめて動かす</span></a>
+                        <div class="worlds__cols">
+                            <a class="worlds__col worlds__col--build" href="services.html" aria-current="page"><span class="worlds__world">DIGITAL WORLD</span><span class="worlds__name">01 BUILD</span><span class="worlds__what">企業のデジタル業務を構造化し、一元管理する</span><ol class="worlds__chain"><li>企業の業務</li><li>データ・システム・コミュニケーション</li><li>一元管理</li><li>Software Agent</li></ol></a>
+                            <a class="worlds__col worlds__col--perceive" href="perceive.html"><span class="worlds__world">PHYSICAL WORLD</span><span class="worlds__name">02 PERCEIVE</span><span class="worlds__what">現実世界の動作をデータにする</span><ol class="worlds__chain"><li>現実世界の作業</li><li>Pressure / Video / Action / Context</li><li>Dataset</li><li>Physical AI</li></ol></a>
+                        </div>
+                    </div>
+
+                    <section class="closing" id="contact" aria-labelledby="closing-title">
+                        <p class="closing__title" id="closing-title" lang="en">Turn operations into structured intelligence.</p>
+                        <p>一元管理システムの導入や、業務のAI化についてご相談いただけます。必要な場合は、個社向けの開発も行います。</p>
+                        <a class="note-cta" href="contact.html">Talk with nerdech →</a>
+                    </section>
+
+                    <section class="backlinks" aria-label="関連するページ">
+                        <p class="pane__title">LINKED</p>
+                        <div class="backlinks__list">
+                            <a href="company-brain.html" data-node="THINK"><span class="backlinks__name">03 THINK</span><span class="backlinks__desc">Company Brain</span></a>
+                            <a href="perceive.html" data-node="PERCEIVE"><span class="backlinks__name">02 PERCEIVE</span><span class="backlinks__desc">Physical AI Data</span></a>
+                            <a href="vision.html" data-node="VISION"><span class="backlinks__name">VISION</span><span class="backlinks__desc">学び直す必要のない世界へ</span></a>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+        <section class="finale" aria-label="nerdech">
+            <div class="finale__stage">
+                <div class="finale__glow" aria-hidden="true"></div>
+                <p class="finale__word"><span class="sr-only">nerdech</span><span aria-hidden="true">n</span><span aria-hidden="true">e</span><span aria-hidden="true">r</span><span aria-hidden="true">d</span><span aria-hidden="true">e</span><span aria-hidden="true">c</span><span aria-hidden="true">h</span></p>
+                <p class="finale__line">TURN OPERATIONS INTO STRUCTURED INTELLIGENCE.</p>
+                <button class="finale__sound" type="button" aria-pressed="false"><span class="finale__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="finale__sound-label">SOUND OFF</span></button>
+                <p class="finale__note">音はボタンを押したときだけ流れます</p>
             </div>
-            <ul class="rows rows--split rows--nonum" data-reveal-each="right,left" data-reveal-step="60">
-                <li class="row">
-                    <h3 class="row__title">Web・業務システム</h3>
-                    <p class="row__tech">React / Next.js / TypeScript / Python / FastAPI / PHP / MySQL</p>
-                </li>
-                <li class="row">
-                    <h3 class="row__title">Windowsアプリ</h3>
-                    <p class="row__tech">VB.NET / Electron / Node.js / MSIX</p>
-                </li>
-                <li class="row">
-                    <h3 class="row__title">モバイルアプリ</h3>
-                    <p class="row__tech">Expo(React Native) / Swift</p>
-                </li>
-                <li class="row">
-                    <h3 class="row__title">クラウド</h3>
-                    <p class="row__tech">Google Cloud(Cloud Run・Firestore) / AWS(ECS・Aurora) / Firebase</p>
-                </li>
-                <li class="row">
-                    <h3 class="row__title">AI</h3>
-                    <p class="row__tech">OpenAI API / Gemini API / Claude API / RAG / 画像生成</p>
-                </li>
-                <li class="row">
-                    <h3 class="row__title">データベース</h3>
-                    <p class="row__tech">MySQL / PostgreSQL / SQL Server / Firestore</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="cta-band" aria-label="お問い合わせ">
-            <a class="btn" href="contact.html" data-reveal="fade">ご相談はこちら →</a>
         </section>
     </main>
 
@@ -210,5 +336,10 @@
     </footer>
 
     <script src="site.js?v=20260925"></script>
+    <script src="ambient.js?v=20260928" defer></script>
+    <script src="note-graph.js?v=20260928" defer></script>
+    <script src="note-ui.js?v=20260928" defer></script>
+    <script src="finale.js?v=20260928" defer></script>
+    <script src="build-hero.js?v=20260928" defer></script>
 </body>
 </html>

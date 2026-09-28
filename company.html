@@ -12,7 +12,7 @@
     <script>document.documentElement.classList.add('js');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="合同会社 nerdech の会社概要。社名、設立、法人番号、代表者、所在地、事業内容、沿革を掲載しています。">
+    <meta name="description" content="nerdech は、AI Agent・Physical AI・Company Brain を中心に、企業が自律的に動くための AI 基盤を開発する会社です。">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="canonical" href="https://nerdech.co.jp/company.html">
@@ -25,7 +25,7 @@
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="https://nerdech.co.jp/company.html">
     <meta property="og:title"       content="会社概要 | 合同会社 nerdech">
-    <meta property="og:description" content="合同会社 nerdech の会社概要。社名、設立、法人番号、代表者、所在地、事業内容、沿革を掲載しています。">
+    <meta property="og:description" content="nerdech は、AI Agent・Physical AI・Company Brain を中心に、企業が自律的に動くための AI 基盤を開発する会社です。">
     <meta property="og:image"       content="https://nerdech.co.jp/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -33,16 +33,17 @@
     <meta property="og:site_name"   content="合同会社 nerdech">
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:title"       content="会社概要 | 合同会社 nerdech">
-    <meta name="twitter:description" content="合同会社 nerdech の会社概要。社名、設立、法人番号、代表者、所在地、事業内容、沿革を掲載しています。">
+    <meta name="twitter:description" content="nerdech は、AI Agent・Physical AI・Company Brain を中心に、企業が自律的に動くための AI 基盤を開発する会社です。">
     <meta name="twitter:image"       content="https://nerdech.co.jp/og-image.png">
     <title>会社概要 | 合同会社 nerdech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=20260925">
-    <link rel="stylesheet" href="p-company.css?v=20260925">
+    <link rel="stylesheet" href="ambient.css?v=20260928">
+    <link rel="stylesheet" href="note.css?v=20260928c">
 </head>
-<body>
+<body class="is-note">
     <!-- ===== 共通ヘッダー(全ページ同一。自ページのリンクに class="active" aria-current="page") ===== -->
     <header class="header">
         <a href="index.html" class="header__logo" aria-label="nerdech — トップへ">
@@ -64,53 +65,106 @@
         </nav>
     </header>
 
-    <main>
-        <header class="page-hero">
-            <h1 class="page-hero__title">company</h1>
-            <p class="page-hero__sub">会社情報</p>
-            <nav class="subnav" aria-label="会社情報">
-                <a class="subnav__link active" href="company.html" aria-current="page">概要</a>
-                <a class="subnav__link" href="message.html">代表挨拶</a>
-            </nav>
-        </header>
+    <main class="note note--company">
+        <section class="note-hero" aria-labelledby="hero-title">
+            <div class="note-hero__text">
+                <nav class="note__path" aria-label="現在地"><a href="index.html">nerdech</a><span aria-hidden="true">/</span><span>COMPANY</span></nav>
+                <p class="note-hero__label"><b>COMPANY</b>About nerdech</p>
+                <h1 class="note-hero__title" id="hero-title"><span class="ph">Digital と</span><span class="ph">Physical を、</span><span class="ph">ひとつの知能で動かす。</span></h1>
+                <p class="note-hero__en" lang="en">Building the intelligence layer for autonomous companies.</p>
+                <p class="note-hero__lead">nerdech は、AI Agent・Physical AI・Company Brain を中心に、企業が自律的に動くための AI 基盤を開発する会社です。</p>
+            </div>
+            <div class="note-hero__visual" data-visual="think" role="img" aria-label="上の Company Brain が、デジタルの世界の Software Agent と、フィジカルの世界の Physical AI を動かす図"></div>
+        </section>
 
-        <section class="block block--light" id="overview">
-            <div class="block__grid">
-                <div class="block__head" data-reveal="left">
-                    <h2 class="block__title">会社概要</h2>
+        <div class="note__layout">
+            <aside class="note__side" aria-label="このページの構成">
+                <div>
+                    <p class="pane__title">LOCAL GRAPH</p>
+                    <div class="local-graph" data-center="COMPANY" role="img" aria-label="このページの項目のつながり。点を押すとその項目へ移動します"></div>
                 </div>
-                <div class="block__body" data-reveal="up">
-                    <dl class="company-list">
-                        <div class="company-list__row"><dt>社名</dt><dd>合同会社 nerdech</dd></div>
-                        <div class="company-list__row"><dt>設立</dt><dd>2026年4月</dd></div>
-                        <div class="company-list__row"><dt>法人番号</dt><dd>2011003024256</dd></div>
-                        <div class="company-list__row"><dt>代表者</dt><dd>木戸 隆正</dd></div>
-                        <div class="company-list__row"><dt>所在地</dt><dd>東京都渋谷区道玄坂一丁目10番8号 渋谷道玄坂東急ビル2F-C</dd></div>
-                        <div class="company-list__row"><dt>事業内容</dt><dd>社内ナレッジ集約AI「Company Brain」の開発・提供、導入支援、AIコンサルティング、受託開発</dd></div>
-                        <div class="company-list__row"><dt>お問い合わせ</dt><dd><a href="mailto:info@nerdech.co.jp">info@nerdech.co.jp</a></dd></div>
+                <nav aria-label="目次">
+                    <p class="pane__title pane__title--outline">OUTLINE</p>
+                    <div class="outline"></div>
+                </nav>
+            </aside>
+            <article class="note__body">
+                <div class="note__head">
+                    <dl class="props">
+                        <dt>社名</dt><dd>合同会社 nerdech</dd>
+                        <dt>設立</dt><dd>2026年4月</dd>
+                        <dt>所在地</dt><dd>東京都渋谷区</dd>
                     </dl>
                 </div>
-            </div>
-        </section>
+                <div class="note__main">
+                    <h2 id="about" data-node="nerdechとは">nerdech とは</h2>
+                    <p>nerdech は、AI Agent・Physical AI・Company Brain を中心に、企業が自律的に動くための AI 基盤を開発する会社です。</p>
+                    <p>現在は、企業向けの AI・業務システム、Physical AI 向けのデータ収集、Company Brain の 3 つの領域で、事業と研究開発を進めています。これらは別々の事業ではありません。</p>
 
-        <section class="block block--dark" id="history">
-            <div class="block__grid">
-                <div class="block__head" data-reveal="left">
-                    <h2 class="block__title">沿革</h2>
-                </div>
-                <div class="block__body">
-                    <ol class="timeline">
-                        <li class="timeline__item" data-reveal="right">
-                            <time class="timeline__date" datetime="2026-04">2026.04</time>
-                            <p class="timeline__title">合同会社 nerdech を設立</p>
-                        </li>
+                    <h2 id="integrate" data-node="統括するもの">nerdech が統括するもの</h2>
+                    <p>nerdech は、Physical AI の会社、AI Agent の会社、業務システムの会社の、どれか 1 つになることを目指しているわけではありません。目指しているのは、Physical AI・AI Agent・Company Brain を統合する会社です。</p>
+                    <ol class="stages">
+                        <li><span class="stages__step">PHYSICAL<b>Physical AI</b></span><p class="stages__body">現実世界で動く。</p></li>
+                        <li><span class="stages__step">DIGITAL<b>AI Agent</b></span><p class="stages__body">デジタル世界で動く。</p></li>
+                        <li class="is-brain"><span class="stages__step">INTELLIGENCE<b>Company Brain</b></span><p class="stages__body">その両方を理解し、統括し、指示する。</p></li>
                     </ol>
-                </div>
-            </div>
-        </section>
+                    <p>nerdech は、この企業向け AI アーキテクチャ全体を提供する会社になることを目指しています。</p>
+                    <p class="copyline" lang="en">We build the intelligence that operates companies.</p>
 
-        <section class="block block--light block--link" aria-label="代表挨拶">
-            <a class="banner-link" href="message.html" data-reveal="up"><span>代表挨拶</span><span class="banner-link__arrow" aria-hidden="true">→</span></a>
+                    <h2 id="businesses" data-node="3つの事業">3 つの事業</h2>
+                    <p>BUILD では、企業のデジタル業務を構造化する。PERCEIVE では、現実世界の技能・動作をデータにする。THINK では、それらを Company Brain が理解し、AI Agent と Physical AI を動かす。この 3 つを統合し、企業そのものが AI によって自律的に動く状態をつくることが、nerdech の目標です。</p>
+                    <div class="worlds">
+                        <a class="worlds__top" href="company-brain.html"><span class="worlds__world">DIGITAL + PHYSICAL</span><span class="worlds__name">03 THINK · COMPANY BRAIN</span><span class="worlds__what">デジタルとフィジカルの両方を理解し、Software Agent と Physical AI をまとめて動かす</span></a>
+                        <div class="worlds__cols">
+                            <a class="worlds__col worlds__col--build" href="services.html"><span class="worlds__world">DIGITAL WORLD</span><span class="worlds__name">01 BUILD</span><span class="worlds__what">企業のデジタル業務を構造化し、一元管理する</span><ol class="worlds__chain"><li>企業の業務</li><li>データ・システム・コミュニケーション</li><li>一元管理</li><li>Software Agent</li></ol></a>
+                            <a class="worlds__col worlds__col--perceive" href="perceive.html"><span class="worlds__world">PHYSICAL WORLD</span><span class="worlds__name">02 PERCEIVE</span><span class="worlds__what">現実世界の動作をデータにする</span><ol class="worlds__chain"><li>現実世界の作業</li><li>Pressure / Video / Action / Context</li><li>Dataset</li><li>Physical AI</li></ol></a>
+                        </div>
+                    </div>
+
+                    <h2 id="now" data-node="現在と構想">現在と構想</h2>
+                    <div class="roadmap" role="table" aria-label="現在の取り組みと構想"><div class="roadmap__row roadmap__head"><span>領域</span><span>現在</span><span>構想</span></div><div class="roadmap__row"><span class="roadmap__name">01 BUILD</span><span>業務を一元管理するシステムの、パッケージ導入。</span><span>企業のデジタル業務を、AI Agent が担えるようにする。</span></div><div class="roadmap__row"><span class="roadmap__name">02 PERCEIVE</span><span>圧力計測グローブの開発と、現場でのデータ収集の計画。</span><span>Physical AI の学習データ事業と、業界向けの Physical AI。</span></div><div class="roadmap__row"><span class="roadmap__name">03 THINK</span><span>Company Brain の開発。</span><span>AI Agent と Physical AI を統括する、企業の知能レイヤー。</span></div></div>
+                    <p class="fineprint">企業の完全な自律運営や、Company Brain によるあらゆる Physical AI の統括は、長期の構想です。考え方は <a class="wl" href="vision.html">VISION</a> にまとめています。</p>
+
+                    <h2 id="profile" data-node="会社概要">会社概要</h2>
+                    <dl class="corp">
+                        <dt>社名</dt><dd>合同会社 nerdech</dd>
+                        <dt>設立</dt><dd>2026年4月</dd>
+                        <dt>法人番号</dt><dd>2011003024256</dd>
+                        <dt>代表者</dt><dd>木戸 隆正</dd>
+                        <dt>所在地</dt><dd>東京都渋谷区道玄坂一丁目10番8号 渋谷道玄坂東急ビル2F-C</dd>
+                        <dt>事業内容</dt><dd>業務を一元管理するシステムの導入と AI・システム開発（BUILD）、Physical AI 向けデータ事業（PERCEIVE）、Company Brain の研究開発（THINK）</dd>
+                        <dt>お問い合わせ</dt><dd><a href="mailto:info@nerdech.co.jp">info@nerdech.co.jp</a></dd>
+                    </dl>
+                    <h3 id="history" data-node="沿革" data-parent="profile">沿革</h3>
+                    <ol class="history"><li><time datetime="2026-04">2026.04</time><span>合同会社 nerdech を設立</span></li></ol>
+                    <p><a class="wl" href="message.html">代表挨拶</a></p>
+
+                    <section class="closing" id="contact" aria-labelledby="closing-title">
+                        <p class="closing__title" id="closing-title" lang="en">Building the intelligence layer for autonomous companies.</p>
+                        <p>nerdech へのご相談・お問い合わせを受け付けています。</p>
+                        <a class="note-cta" href="contact.html">Talk with nerdech →</a>
+                    </section>
+
+                    <section class="backlinks" aria-label="関連するページ">
+                        <p class="pane__title">LINKED</p>
+                        <div class="backlinks__list">
+                            <a href="vision.html" data-node="VISION"><span class="backlinks__name">VISION</span><span class="backlinks__desc">学び直す必要のない世界へ</span></a>
+                            <a href="services.html" data-node="BUILD"><span class="backlinks__name">01 BUILD</span><span class="backlinks__desc">AI Development &amp; Consulting</span></a>
+                            <a href="perceive.html" data-node="PERCEIVE"><span class="backlinks__name">02 PERCEIVE</span><span class="backlinks__desc">Physical AI Data</span></a>
+                            <a href="company-brain.html" data-node="THINK"><span class="backlinks__name">03 THINK</span><span class="backlinks__desc">Company Brain</span></a>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+        <section class="finale" aria-label="nerdech">
+            <div class="finale__stage">
+                <div class="finale__glow" aria-hidden="true"></div>
+                <p class="finale__word"><span class="sr-only">nerdech</span><span aria-hidden="true">n</span><span aria-hidden="true">e</span><span aria-hidden="true">r</span><span aria-hidden="true">d</span><span aria-hidden="true">e</span><span aria-hidden="true">c</span><span aria-hidden="true">h</span></p>
+                <p class="finale__line">BUILDING THE INTELLIGENCE LAYER FOR AUTONOMOUS COMPANIES.</p>
+                <button class="finale__sound" type="button" aria-pressed="false"><span class="finale__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="finale__sound-label">SOUND OFF</span></button>
+                <p class="finale__note">音はボタンを押したときだけ流れます</p>
+            </div>
         </section>
     </main>
 
@@ -156,5 +210,10 @@
 
     <script src="news-render.js"></script>
     <script src="site.js?v=20260925"></script>
+    <script src="ambient.js?v=20260928" defer></script>
+    <script src="note-graph.js?v=20260928" defer></script>
+    <script src="note-ui.js?v=20260928" defer></script>
+    <script src="finale.js?v=20260928" defer></script>
+    <script src="think-hero.js?v=20260928" defer></script>
 </body>
 </html>

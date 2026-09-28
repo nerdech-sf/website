@@ -1,0 +1,266 @@
+/* nerdech — front.css
+   トップはファーストビュー 1 枚だけ。スクロールなし。
+   Obsidian のグラフビューのように、知識のノードと線で脳を描く (front-graph.js)。 */
+
+html:has(body.is-front),
+body.is-front {
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
+.is-front .particle-canvas,
+.is-front .scanline,
+.is-front .cursor-glow { display: none; }
+
+.front {
+    --accent: #a882ff;
+    --node: #b9b9bd;
+    --label: rgba(236, 236, 240, 0.9);
+    --muted: rgba(236, 236, 240, 0.45);
+
+    /* 脳の位置と大きさ(front-graph.js が .hub の矩形を読む) */
+    --brain-x: 50%;
+    --brain-y: 49%;
+    --brain-w: min(44vw, 56vh);
+
+    --think-x: 50%;    --think-y: 18%;
+    --build-x: 20%;    --build-y: 62%;
+    --perceive-x: 80%; --perceive-y: 62%;
+
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse 55% 50% at 50% 47%, #1b1b20 0%, rgba(27, 27, 32, 0) 72%),
+        #111113;
+    color: var(--label);
+}
+
+.front__graph {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* ---------- 脳 ---------- */
+.hub {
+    position: absolute;
+    left: var(--brain-x);
+    top: var(--brain-y);
+    width: var(--brain-w);
+    aspect-ratio: 1.15 / 1;
+    transform: translate(-50%, -50%);
+    border-radius: 45%;
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 脳の中央の大きな光 = VISION */
+.hub__core {
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    border-radius: 50%;
+    background: #f3eeff;
+    box-shadow:
+        0 0 12px 4px rgba(214, 196, 255, 0.95),
+        0 0 42px 16px rgba(168, 130, 255, 0.55),
+        0 0 120px 50px rgba(168, 130, 255, 0.22);
+    opacity: 0;
+    transform: scale(0.4);
+    transition: opacity 1.2s ease 0.6s, transform 1.4s cubic-bezier(.2,.7,.2,1) 0.6s, box-shadow 0.4s ease;
+    animation: core-breathe 4.8s ease-in-out infinite;
+}
+.front.is-ready .hub__core { opacity: 1; transform: scale(1); }
+.hub__ring {
+    position: absolute;
+    inset: -22px;
+    border: 1px solid rgba(190, 168, 255, 0.35);
+    border-radius: 50%;
+    animation: core-ring 4.8s ease-out infinite;
+}
+.hub__ring--2 { animation-delay: -2.4s; }
+@keyframes core-breathe { 0%, 100% { filter: brightness(0.92); } 50% { filter: brightness(1.12); } }
+@keyframes core-ring { from { transform: scale(0.6); opacity: 0.8; } to { transform: scale(2.4); opacity: 0; } }
+
+.hub__vision {
+    position: absolute;
+    left: 50%;
+    top: calc(46% + 42px);
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.42em;
+    padding-left: 0.42em;
+    color: rgba(236, 232, 255, 0.85);
+    text-shadow: 0 0 10px rgba(17, 17, 19, 0.9);
+    opacity: 0;
+    transition: opacity 1s ease 1.4s, color 0.3s ease;
+}
+.front.is-ready .hub__vision { opacity: 1; }
+.hub:hover .hub__core,
+.hub:focus-visible .hub__core {
+    box-shadow:
+        0 0 14px 5px rgba(224, 210, 255, 1),
+        0 0 52px 22px rgba(168, 130, 255, 0.7),
+        0 0 150px 64px rgba(168, 130, 255, 0.3);
+}
+.hub:hover .hub__vision, .hub:focus-visible .hub__vision { color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+    .hub__core, .hub__ring { animation: none; }
+    .hub__ring { display: none; }
+}
+
+/* ---------- 事業ノード ---------- */
+.gnode {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px 8px;
+    transform: translate(-50%, -9px); /* ドットの中心が座標に来る */
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.front.is-ready .gnode { opacity: 1; }
+.front.is-ready .gnode--build { transition-delay: 0.12s; }
+.front.is-ready .gnode--perceive { transition-delay: 0.24s; }
+
+/* THINK は脳の上にあるので、文字を点の上に置いて線と重ねない */
+.gnode--think    { left: var(--think-x);    top: var(--think-y);
+                   transform: translate(-50%, calc(-100% + 13px)); }
+.gnode--think .gnode__name { margin-top: 0; }
+.gnode--think .gnode__dot  { margin-top: 6px; }
+.gnode--build    { left: var(--build-x);    top: var(--build-y); }
+.gnode--perceive { left: var(--perceive-x); top: var(--perceive-y); }
+
+.gnode__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--node);
+    box-shadow: 0 0 0 4px rgba(185, 185, 189, 0.08);
+    transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.gnode__name {
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    transition: color 0.25s ease;
+}
+.gnode__num {
+    margin-right: 0.7em;
+    color: var(--muted);
+    font-weight: 400;
+}
+.gnode__desc {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+.gnode:hover .gnode__dot,
+.gnode:focus-visible .gnode__dot {
+    background: var(--accent);
+    transform: scale(1.3);
+    box-shadow: 0 0 0 5px rgba(168, 130, 255, 0.16), 0 0 18px 2px rgba(168, 130, 255, 0.45);
+}
+.gnode:hover .gnode__name,
+.gnode:focus-visible .gnode__name { color: #fff; }
+
+.gnode:focus-visible,
+.hub:focus-visible,
+.front-more:focus-visible {
+    outline: 1px solid rgba(168, 130, 255, 0.8);
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+/* ---------- COMPANY ---------- */
+.front-more {
+    position: absolute;
+    left: 50%;
+    bottom: max(24px, env(safe-area-inset-bottom, 0px) + 12px);
+    transform: translateX(-50%);
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 6px 10px;
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.8s ease 0.5s;
+}
+.front.is-ready .front-more { opacity: 1; }
+.front-more__kicker {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+}
+.front-more__title {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    transition: color 0.25s ease;
+}
+.front-more:hover .front-more__title { color: var(--accent); }
+
+/* ---------- スマホ(縦長) ---------- */
+@media (max-aspect-ratio: 1/1) {
+    .front {
+        --brain-y: 45%;
+        --brain-w: min(80vw, 40vh);
+        --think-y: max(19%, 142px);
+        --build-x: 17%;    --build-y: 72%;
+        --perceive-x: 83%; --perceive-y: 72%;
+    }
+    .front-more__kicker { display: none; }
+}
+
+/* 背の低いスマホ(iPhone SE など) */
+@media (max-aspect-ratio: 1/1) and (max-height: 720px) {
+    .front {
+        --brain-w: min(74vw, 36vh);
+        --brain-y: 43%;
+        --build-y: 76%;
+        --perceive-y: 76%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hub__label, .gnode, .front-more { transition: none; }
+}
+
+/* 事業がどちらの世界を担うか */
+.gnode__world {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: rgba(236, 236, 240, 0.3);
+}
+.gnode--build .gnode__world,
+.gnode--perceive .gnode__world { margin-top: 2px; }
+.gnode--think .gnode__world { margin-bottom: 2px; }
+
+@media (max-aspect-ratio: 1/1) {
+    .gnode--build .gnode__desc,
+    .gnode--perceive .gnode__desc { white-space: normal; max-width: 10em; text-align: center; line-height: 1.5; }
+}
