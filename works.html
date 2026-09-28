@@ -39,8 +39,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260925">
+    <link rel="stylesheet" href="style.css?v=20260928d">
     <link rel="stylesheet" href="p-works.css?v=20260925">
+    <link rel="stylesheet" href="ambient.css?v=20260928">
+    <link rel="stylesheet" href="note.css?v=20260928c">
 </head>
 <body>
     <!-- ===== 共通ヘッダー(全ページ同一。自ページのリンクに class="active" aria-current="page") ===== -->
@@ -64,8 +66,9 @@
         </nav>
     </header>
 
-    <main>
+    <main class="note note--legacy">
         <header class="page-hero">
+            <nav class="note__path" aria-label="現在地"><a href="index.html">nerdech</a><span aria-hidden="true">/</span><span>WORKS</span></nav>
             <h1 class="page-hero__title">works</h1>
             <p class="page-hero__sub">事例</p>
         </header>
@@ -74,7 +77,7 @@
             <p class="lead works-lead" data-reveal="up">受託開発とAI開発の事例です。お客様の名称は非公開としています。</p>
         </section>
 
-        <section class="block block--light">
+        <section class="block block--dark">
             <ol class="rows" data-reveal-each="left,right">
                 <li class="row">
                     <span class="row__num" aria-hidden="true">01</span>
@@ -174,5 +177,6 @@
 
     <script src="news-render.js"></script>
     <script src="site.js?v=20260925"></script>
+    <script src="ambient.js?v=20260928"></script>
 </body>
 </html>

@@ -160,6 +160,18 @@ small { font-size: inherit; }
     color: var(--fg);
 }
 
+/* ---- .note--legacy ------------------------------------
+   works / message / news / contact / privacy に、ambient.js の背景の光を重ねるための下地。
+   .note 自体の余白・背景(note.css)は使わず、既存の page-hero/block/contact-split の
+   不透明な背景だけを透過させ、body の黒地の上に ambient.js のキャンバスを見せる。
+------------------------------------------------------ */
+.note--legacy { padding: 0; background: none; }
+.note--legacy .page-hero,
+.note--legacy .block,
+.note--legacy .cta-band,
+.note--legacy .contact-split__left,
+.note--legacy .contact-split__right { background: transparent; }
+
 
 /* =====================
    2. HEADER / NAV / HAMBURGER
@@ -1765,18 +1777,18 @@ a.footer__value:hover { color: var(--gray-4); }
 
 /* ── 左パネル ── */
 .contact-split__left {
-    --bg: var(--off-white);
-    --fg: var(--black);
-    --fg-mute: #3e3e3a;
-    --fg-dim: var(--gray-5);
-    --line: rgba(10, 10, 10, 0.14);
-    --line-strong: rgba(10, 10, 10, 0.36);
-    background: var(--off-white);
-    color: var(--black);
+    --bg: var(--black);
+    --fg: var(--white);
+    --fg-mute: var(--gray-4);
+    --fg-dim: var(--gray-3);
+    --line: rgba(245, 245, 240, 0.14);
+    --line-strong: rgba(245, 245, 240, 0.34);
+    background: var(--bg);
+    color: var(--fg);
     display: flex;
     flex-direction: column;
     padding: 128px 56px 44px;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(245, 245, 240, 0.1);
 }
 
 .cs-top {
@@ -1789,12 +1801,12 @@ a.footer__value:hover { color: var(--gray-4); }
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.16em;
-    color: var(--gray-5);
+    color: var(--fg-dim);
     text-decoration: none;
     transition: color 0.25s ease;
 }
 
-.cs-back:hover { color: var(--black); }
+.cs-back:hover { color: var(--fg); }
 
 .cs-main {
     flex: 1;
@@ -1810,7 +1822,7 @@ a.footer__value:hover { color: var(--gray-4); }
     font-size: 13px;
     font-weight: 300;
     letter-spacing: 0.24em;
-    color: var(--gray-5);
+    color: var(--fg-dim);
 }
 
 .cs-statement {
@@ -1820,7 +1832,7 @@ a.footer__value:hover { color: var(--gray-4); }
     font-weight: 500;
     line-height: 1.55;
     letter-spacing: 0;
-    color: var(--black);
+    color: var(--fg);
 }
 
 .cs-statement span {
@@ -1848,7 +1860,7 @@ a.footer__value:hover { color: var(--gray-4); }
     font-weight: 300;
     letter-spacing: 0.06em;
     line-height: 1.8;
-    color: var(--gray-5);
+    color: var(--fg-dim);
 }
 
 .cs-copy {
@@ -1856,7 +1868,7 @@ a.footer__value:hover { color: var(--gray-4); }
     font-size: 12px;
     font-weight: 300;
     letter-spacing: 0.14em;
-    color: var(--gray-5);
+    color: var(--fg-dim);
 }
 
 /* ── 右パネル ── */
@@ -2297,7 +2309,7 @@ a.footer__value:hover { color: var(--gray-4); }
     .contact-split__left {
         padding: 112px 28px 36px;
         border-right: 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(245, 245, 240, 0.1);
     }
 
     .cs-main {

@@ -39,8 +39,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260925">
+    <link rel="stylesheet" href="style.css?v=20260928d">
     <link rel="stylesheet" href="p-company.css?v=20260925">
+    <link rel="stylesheet" href="ambient.css?v=20260928">
+    <link rel="stylesheet" href="note.css?v=20260928c">
 </head>
 <body>
     <!-- ===== 共通ヘッダー(全ページ同一。自ページのリンクに class="active" aria-current="page") ===== -->
@@ -64,8 +66,9 @@
         </nav>
     </header>
 
-    <main>
+    <main class="note note--legacy">
         <header class="page-hero">
+            <nav class="note__path" aria-label="現在地"><a href="index.html">nerdech</a><span aria-hidden="true">/</span><a href="company.html">COMPANY</a><span aria-hidden="true">/</span><span>MESSAGE</span></nav>
             <h1 class="page-hero__title">message</h1>
             <p class="page-hero__sub">代表挨拶</p>
             <nav class="subnav" aria-label="会社情報">
@@ -78,7 +81,7 @@
             <p class="statement__text" data-reveal="up"><span class="ph">会社の知識を、</span><span class="ph">ひとつの脳にする。</span></p>
         </section>
 
-        <section class="block block--light">
+        <section class="block block--dark">
             <div class="block__grid">
                 <div class="letter" data-reveal="up">
                     <p>会社の中には、その会社にしかない答えがあります。請求書をどの順で出すのか、この案件は誰が担当か、去年あの条件を断った理由は何か。けれどそれらは、共有フォルダ、個人のPC、メール、チャット、そして担当者の頭の中に散らばっています。</p>
@@ -133,5 +136,6 @@
 
     <script src="news-render.js"></script>
     <script src="site.js?v=20260925"></script>
+    <script src="ambient.js?v=20260928"></script>
 </body>
 </html>
