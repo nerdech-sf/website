@@ -78,56 +78,68 @@
         </section>
 
         <section class="block block--dark">
-            <ol class="rows" data-reveal-each="left,right">
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">01</span>
-                    <p class="row__label">海外向けに営業を行う企業向け</p>
-                    <h2 class="row__title">海外営業支援AI</h2>
-                    <p class="row__body">多言語の問い合わせに、翻訳と社内資料を根拠にしたAI回答案の作成、承認、返信までをつなぎました。</p>
-                    <ul class="tags"><li>React</li><li>FastAPI</li><li>AWS</li><li>OpenAI API</li></ul>
-                    <p class="row__meta"><span>2026.06〜</span><span>開発中</span></p>
-                </li>
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">02</span>
-                    <p class="row__label">木材・建材商社向け</p>
-                    <h2 class="row__title">基幹システムの機能追加とデータベース移行</h2>
-                    <p class="row__body">既存の業務システムへの機能追加と、SQL Server から MySQL へのデータベース移行を担当しています。</p>
-                    <ul class="tags"><li>VB.NET</li><li>MySQL</li></ul>
-                    <p class="row__meta"><span>2026.04〜</span><span>開発中</span></p>
-                </li>
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">03</span>
-                    <p class="row__label">マッチングサービス運営企業向け</p>
-                    <h2 class="row__title">会員制マッチングサービスの公開・追加開発・保守</h2>
-                    <p class="row__body">モバイルアプリ、Web、管理画面で構成された既存サービスの公開と、追加開発・保守を担当しています。</p>
-                    <ul class="tags"><li>Expo</li><li>Next.js</li><li>Supabase</li></ul>
-                    <p class="row__meta"><span>2026.02〜</span><span>運用・保守中</span></p>
-                </li>
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">04</span>
-                    <p class="row__label">業務ソフトウェア向け</p>
-                    <h2 class="row__title">データ変換アプリとライセンス認証基盤</h2>
-                    <p class="row__body">データ変換のWindowsアプリと、ライセンス認証サーバー、製品紹介サイトを一式で開発しました。</p>
-                    <ul class="tags"><li>Electron</li><li>PHP</li><li>MySQL</li></ul>
-                    <p class="row__meta"><span>2025.12〜</span><span>運用・保守中</span></p>
-                </li>
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">05</span>
-                    <p class="row__label">Webサービス運営企業向け</p>
-                    <h2 class="row__title">会員制Webサイトのサーバー移設</h2>
-                    <p class="row__body">稼働中のサイトを新しいサーバーへ移設。DNS切替とメールの到達性設定まで対応しました。</p>
-                    <ul class="tags"><li>Linux</li><li>DNS</li></ul>
-                    <p class="row__meta"><span>2026.02</span><span>完了</span></p>
-                </li>
-                <li class="row">
-                    <span class="row__num" aria-hidden="true">06</span>
-                    <p class="row__label">業務用アプリの改修</p>
-                    <h2 class="row__title">iOSアプリの改修と社内配布への再署名</h2>
-                    <p class="row__body">既存のiOSアプリにスキャナー連携などを実装し、社内配布向けに再署名して納品しました。</p>
-                    <ul class="tags"><li>Swift</li></ul>
-                    <p class="row__meta"><span>2026.06〜07</span><span>納品済み</span></p>
-                </li>
-            </ol>
+            <div class="cards" data-reveal-each="up">
+                <article class="card">
+                    <span class="card__num" aria-hidden="true">01</span>
+                    <p class="card__label">海外向けに営業を行う企業向け</p>
+                    <h2 class="card__title">海外営業支援AI</h2>
+                    <div class="card__body">
+                        <p>多言語の問い合わせに、翻訳と社内資料を根拠にしたAI回答案の作成、承認、返信までをつなぎました。</p>
+                        <ul class="tags"><li>React</li><li>FastAPI</li><li>AWS</li><li>OpenAI API</li></ul>
+                        <p class="card__status"><span class="status-badge status-badge--active">開発中</span><span>2026.06〜</span></p>
+                    </div>
+                </article>
+                <article class="card">
+                    <span class="card__num" aria-hidden="true">02</span>
+                    <p class="card__label">木材・建材商社向け</p>
+                    <h2 class="card__title">基幹システムの機能追加とデータベース移行</h2>
+                    <div class="card__body">
+                        <p>既存の業務システムへの機能追加と、SQL Server から MySQL へのデータベース移行を担当しています。</p>
+                        <ul class="tags"><li>VB.NET</li><li>MySQL</li></ul>
+                        <p class="card__status"><span class="status-badge status-badge--active">開発中</span><span>2026.04〜</span></p>
+                    </div>
+                </article>
+                <article class="card">
+                    <span class="card__num" aria-hidden="true">03</span>
+                    <p class="card__label">マッチングサービス運営企業向け</p>
+                    <h2 class="card__title">会員制マッチングサービスの公開・追加開発・保守</h2>
+                    <div class="card__body">
+                        <p>モバイルアプリ、Web、管理画面で構成された既存サービスの公開と、追加開発・保守を担当しています。</p>
+                        <ul class="tags"><li>Expo</li><li>Next.js</li><li>Supabase</li></ul>
+                        <p class="card__status"><span class="status-badge status-badge--maintained">運用・保守中</span><span>2026.02〜</span></p>
+                    </div>
+                </article>
+                <article class="card">
+                    <span class="card__num" aria-hidden="true">04</span>
+                    <p class="card__label">業務ソフトウェア向け</p>
+                    <h2 class="card__title">データ変換アプリとライセンス認証基盤</h2>
+                    <div class="card__body">
+                        <p>データ変換のWindowsアプリと、ライセンス認証サーバー、製品紹介サイトを一式で開発しました。</p>
+                        <ul class="tags"><li>Electron</li><li>PHP</li><li>MySQL</li></ul>
+                        <p class="card__status"><span class="status-badge status-badge--maintained">運用・保守中</span><span>2025.12〜</span></p>
+                    </div>
+                </article>
+                <article class="card">
+                    <span class="card__num" aria-hidden="true">05</span>
+                    <p class="card__label">Webサービス運営企業向け</p>
+                    <h2 class="card__title">会員制Webサイトのサーバー移設</h2>
+                    <div class="card__body">
+                        <p>稼働中のサイトを新しいサーバーへ移設。DNS切替とメールの到達性設定まで対応しました。</p>
+                        <ul class="tags"><li>Linux</li><li>DNS</li></ul>
+                        <p class="card__status"><span class="status-badge status-badge--done">完了</span><span>2026.02</span></p>
+                    </div>
+                </article>
+                <article class="card">
+                    <span class="card__num" aria-hidden="true">06</span>
+                    <p class="card__label">業務用アプリの改修</p>
+                    <h2 class="card__title">iOSアプリの改修と社内配布への再署名</h2>
+                    <div class="card__body">
+                        <p>既存のiOSアプリにスキャナー連携などを実装し、社内配布向けに再署名して納品しました。</p>
+                        <ul class="tags"><li>Swift</li></ul>
+                        <p class="card__status"><span class="status-badge status-badge--done">納品済み</span><span>2026.06〜07</span></p>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section class="cta-band" aria-label="事例についてのご相談">

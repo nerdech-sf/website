@@ -1455,6 +1455,46 @@ small { font-size: inherit; }
     color: var(--fg-mute);
 }
 
+.card__body .tags { margin-top: 20px; }
+
+/* card__body の中に、状況バッジと期間を1行で置く(任意)。
+   <p class="card__status"><span class="status-badge status-badge--active">開発中</span><span>2026.06〜</span></p> */
+.card__status {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--fg-dim);
+}
+
+/* 事例カードの状況を、読む前に色で判別できるようにする小さな丸バッジ。
+   進行中ほど目立たせ、完了は控えめにする。 */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-weight: 500;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+.status-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+.status-badge--active     { color: var(--accent, #a882ff); }
+.status-badge--maintained { color: #7ed7a3; }
+.status-badge--done       { color: var(--fg-dim); border-color: var(--line-strong); }
+.status-badge--done::before { opacity: 0.6; }
+
 /* ---- .work-feature ---------------------------------
    works の特集カード(全幅・大・リンクなし)。TOP と works.html で共用。
    <article class="work-feature">
