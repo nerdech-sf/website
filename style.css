@@ -172,6 +172,13 @@ small { font-size: inherit; }
 .note--legacy .contact-split__left,
 .note--legacy .contact-split__right { background: transparent; }
 
+/* note.css の汎用 `.note h2`/`.note p` (works の事例カード用に note.css を読み込んでいるページで、
+   見出し・段落の余白/罫線を上書きしてしまう)を、.card 内では元の .card__title/.card__body の見た目に戻す。 */
+.note--legacy .card__title { margin: 0; padding: 14px 32px 0; border-bottom: 0; }
+.note--legacy .card__label,
+.note--legacy .card__body p,
+.note--legacy .card__status { margin-top: 0; }
+
 
 /* =====================
    2. HEADER / NAV / HAMBURGER
