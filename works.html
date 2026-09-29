@@ -39,7 +39,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260928h">
+    <link rel="stylesheet" href="style.css?v=20260928i">
     <link rel="stylesheet" href="p-works.css?v=20260925">
     <link rel="stylesheet" href="ambient.css?v=20260928">
     <link rel="stylesheet" href="note.css?v=20260928c">
@@ -74,10 +74,13 @@
         </header>
 
         <section class="block block--dark">
-            <p class="lead works-lead" data-reveal="up">受託開発とAI開発の事例です。お客様の名称は非公開としています。</p>
+            <p class="lead works-lead" data-reveal="up">受託開発・AI開発と、業務コンサルティングの事例です。一部のお客様は匿名でご紹介しています。</p>
         </section>
 
         <section class="block block--dark">
+            <div class="block__intro">
+                <h2 class="block__subtitle" data-reveal="up">受託開発</h2>
+            </div>
             <div class="cards" data-reveal-each="up">
                 <article class="card">
                     <div class="card__image"><img src="work-01.webp" alt="" loading="lazy"></div>
@@ -139,14 +142,29 @@
                         <ul class="tags"><li>Swift</li></ul>
                     </div>
                 </article>
+            </div>
+
+            <div class="block__intro">
+                <h2 class="block__subtitle" data-reveal="up">コンサル</h2>
+            </div>
+            <div class="cards" data-reveal-each="up">
                 <article class="card">
                     <div class="card__image"><img src="work-07.webp" alt="" loading="lazy"></div>
-                    <span class="card__num" aria-hidden="true">07</span>
-                    <p class="card__label">LP制作・Web制作を行う企業向け</p>
-                    <h2 class="card__title">LP自動生成システムと社内日報管理bot</h2>
+                    <span class="card__num" aria-hidden="true">01</span>
+                    <p class="card__label">株式会社nahato</p>
+                    <h2 class="card__title">社内連絡の一元化コンサルティングと日報管理botの実装</h2>
                     <div class="card__body">
-                        <p>LPを自動生成するシステムの開発に加えて、Discord上で日報の投稿・催促・記録を自動化する社内向けbotを開発しました。案件ごとに投稿曜日や催促時刻を個別設定でき、GitHubのプルリクエスト通知やカレンダー形式の日別ビューも備え、複数プロジェクトを横断して運用できる基盤にしています。</p>
-                        <ul class="tags"><li>Firebase</li><li>Cloud Run</li><li>Firestore</li><li>Discord Bot</li></ul>
+                        <p>Slack・Chatwork・LINEに分散していた社内連絡を、メインのチャットツールに一本化する設計から入りました。決めて終わりにせず、日々の進捗報告を自動で集め、未回答があれば催促し、記録として残すbotまで実装し、複数プロジェクトを横断して運用できる基盤にしています。あわせて、LPを自動生成するシステムの開発も担当しました。</p>
+                        <ul class="tags"><li>業務コンサル</li><li>Firebase</li><li>Cloud Run</li><li>Discord Bot</li></ul>
+                    </div>
+                </article>
+                <article class="card">
+                    <span class="card__num" aria-hidden="true">02</span>
+                    <p class="card__label">株式会社ウェルビーライフホールディングス</p>
+                    <h2 class="card__title">社内の一元管理に向けた設計・実装支援</h2>
+                    <div class="card__body">
+                        <p>社内に散らばる業務データや情報を一元管理できる状態に近づけるための設計・実装を、継続的な協業のなかで進めています。</p>
+                        <ul class="tags"><li>業務コンサル</li></ul>
                     </div>
                 </article>
             </div>

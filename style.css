@@ -721,6 +721,7 @@ small { font-size: inherit; }
 }
 
 .block__intro { margin-bottom: clamp(40px, 5vw, 64px); }
+.cards + .block__intro { margin-top: clamp(64px, 8vw, 96px); }
 
 /* block__body 内の小見出し(一文)。場面ごとの見出しなど。<h3 class="block__subtitle">…</h3> */
 .block__subtitle {
