@@ -1421,6 +1421,19 @@ small { font-size: inherit; }
     transition: border-color 0.3s ease;
 }
 
+/* card 先頭に置くアイキャッチ画像(任意)。<div class="card__image"><img ...></div> */
+.card__image {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+}
+.card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .card:hover { border-color: var(--line-strong); }
 
 .card__num {
